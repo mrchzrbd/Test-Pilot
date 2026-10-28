@@ -1,0 +1,1 @@
+import{j as s,cn as r}from"./main-BWiVaK3s.js";function n({columns:t=3,children:i,className:o,variant:p="chrome"}){const a=t===5?r.topbarCardKpiFive:t===4?r.topbarCardKpiFour:"",e=p==="flat"?`${r.topbarCardKpi} ${a}`:`${r.topbarSection} ${r.topbarCardKpi} ${a}`;return s.jsx("div",{className:`${e}${o?` ${o}`:""}`,"aria-live":"polite",children:i})}export{n as I};

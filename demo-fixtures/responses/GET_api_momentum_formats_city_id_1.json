@@ -1,0 +1,416 @@
+{
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "city_id": 1,
+  "format_labels": {
+    "cafeteria": "Cafeteria and other food service",
+    "fast_food": "Fast food/takeaway",
+    "bars_cafes": "Bars and cafes",
+    "traditional_restaurant": "Traditional restaurant"
+  },
+  "age_at_closure": [
+    {
+      "share": 0.1153,
+      "closures": 1945,
+      "age_bucket": "0-1y",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.1013,
+      "closures": 1708,
+      "age_bucket": "1-2y",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.1197,
+      "closures": 2018,
+      "age_bucket": "2-3y",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.1929,
+      "closures": 3253,
+      "age_bucket": "3-5y",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.4708,
+      "closures": 7939,
+      "age_bucket": "5y+",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.156,
+      "closures": 1955,
+      "age_bucket": "0-1y",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.1306,
+      "closures": 1637,
+      "age_bucket": "1-2y",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.145,
+      "closures": 1817,
+      "age_bucket": "2-3y",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.2064,
+      "closures": 2587,
+      "age_bucket": "3-5y",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.3621,
+      "closures": 4539,
+      "age_bucket": "5y+",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.1923,
+      "closures": 20,
+      "age_bucket": "0-1y",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.0673,
+      "closures": 7,
+      "age_bucket": "1-2y",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.1923,
+      "closures": 20,
+      "age_bucket": "2-3y",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.1538,
+      "closures": 16,
+      "age_bucket": "3-5y",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.3942,
+      "closures": 41,
+      "age_bucket": "5y+",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.1343,
+      "closures": 332,
+      "age_bucket": "0-1y",
+      "format_group": "bars_cafes"
+    },
+    {
+      "share": 0.1112,
+      "closures": 275,
+      "age_bucket": "1-2y",
+      "format_group": "bars_cafes"
+    },
+    {
+      "share": 0.121,
+      "closures": 299,
+      "age_bucket": "2-3y",
+      "format_group": "bars_cafes"
+    },
+    {
+      "share": 0.1909,
+      "closures": 472,
+      "age_bucket": "3-5y",
+      "format_group": "bars_cafes"
+    },
+    {
+      "share": 0.4426,
+      "closures": 1094,
+      "age_bucket": "5y+",
+      "format_group": "bars_cafes"
+    }
+  ],
+  "by_format_year": {
+    "cafeteria": {
+      "net": [
+        -1,
+        7,
+        2,
+        12,
+        -3,
+        -9,
+        -3,
+        1,
+        -2,
+        3,
+        0
+      ],
+      "closures": [
+        4,
+        2,
+        3,
+        4,
+        7,
+        12,
+        4,
+        4,
+        5,
+        0,
+        2
+      ],
+      "openings": [
+        3,
+        9,
+        5,
+        16,
+        4,
+        3,
+        1,
+        5,
+        3,
+        3,
+        2
+      ],
+      "survival_3y": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_stock": [
+        42,
+        49,
+        51,
+        62,
+        59,
+        50,
+        47,
+        48,
+        46,
+        49,
+        49
+      ]
+    },
+    "fast_food": {
+      "net": [
+        541,
+        372,
+        454,
+        555,
+        235,
+        382,
+        565,
+        309,
+        315,
+        536,
+        326
+      ],
+      "closures": [
+        637,
+        693,
+        733,
+        796,
+        805,
+        805,
+        705,
+        1005,
+        1061,
+        921,
+        565
+      ],
+      "openings": [
+        1178,
+        1065,
+        1187,
+        1351,
+        1040,
+        1187,
+        1270,
+        1314,
+        1376,
+        1457,
+        891
+      ],
+      "survival_3y": [
+        0.6343577620173365,
+        0.6523972602739726,
+        0.6425196850393701,
+        0.6708420320111343,
+        0.634508348794063,
+        0.6373182552504039,
+        0.6817155756207675,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_stock": [
+        7316,
+        7691,
+        8138,
+        8702,
+        8935,
+        9324,
+        9897,
+        10211,
+        10547,
+        11086,
+        11497
+      ]
+    },
+    "bars_cafes": {
+      "net": [
+        140,
+        143,
+        162,
+        150,
+        11,
+        -18,
+        68,
+        75,
+        162,
+        301,
+        243
+      ],
+      "closures": [
+        123,
+        136,
+        171,
+        177,
+        171,
+        166,
+        166,
+        192,
+        191,
+        183,
+        105
+      ],
+      "openings": [
+        263,
+        279,
+        333,
+        327,
+        182,
+        148,
+        234,
+        267,
+        353,
+        484,
+        348
+      ],
+      "survival_3y": [
+        0.6907216494845361,
+        0.7712418300653595,
+        0.7314285714285714,
+        0.7670454545454546,
+        0.6910994764397905,
+        0.7843137254901961,
+        0.7389558232931727,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_stock": [
+        1827,
+        1981,
+        2150,
+        2313,
+        2329,
+        2319,
+        2392,
+        2474,
+        2638,
+        2945,
+        3372
+      ]
+    },
+    "traditional_restaurant": {
+      "net": [
+        254,
+        288,
+        336,
+        340,
+        25,
+        90,
+        463,
+        305,
+        299,
+        122,
+        -74
+      ],
+      "closures": [
+        936,
+        962,
+        1003,
+        1029,
+        910,
+        905,
+        865,
+        1038,
+        1161,
+        1085,
+        611
+      ],
+      "openings": [
+        1190,
+        1250,
+        1339,
+        1369,
+        935,
+        995,
+        1328,
+        1343,
+        1460,
+        1207,
+        537
+      ],
+      "survival_3y": [
+        0.724841660802252,
+        0.7379356568364611,
+        0.718503937007874,
+        0.7548891786179922,
+        0.748753738783649,
+        0.7271872060206962,
+        0.725125268432355,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_stock": [
+        12417,
+        12781,
+        13178,
+        13574,
+        13627,
+        13740,
+        14233,
+        14555,
+        14887,
+        15048,
+        15983
+      ]
+    }
+  },
+  "etag": "d45f4376f83a4ece701e5c3c015c52ce",
+  "server_ms": 57.89
+}

@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "city_id": 1,
+    "grid_cell_count": 1227,
+    "cell_id_key": "h3_index (same as market_cell_stats)",
+    "never_scores_opportunity": true,
+    "signal_correlations": [
+      {
+        "a": "airbnb_tourist_presence",
+        "b": "landmark_attention",
+        "spearman": 0.4998
+      },
+      {
+        "a": "airbnb_tourist_presence",
+        "b": "events_footfall",
+        "spearman": 0.4242
+      },
+      {
+        "a": "landmark_attention",
+        "b": "events_footfall",
+        "spearman": 0.2853
+      }
+    ],
+    "audit_quality": [
+      {
+        "id": "privacy_scan",
+        "label": "Privacy scan (digital tables)",
+        "pass": true,
+        "detail": "Only public landmark names and cell ids in store"
+      },
+      {
+        "id": "pageview_agent",
+        "label": "Landmark pageviews: human traffic (agent=user)",
+        "pass": true,
+        "detail": "meta.pageview_agent=user"
+      },
+      {
+        "id": "snapshot_windows",
+        "label": "Airbnb/events windows anchored on snapshot date",
+        "pass": true,
+        "detail": "2026-06-16"
+      },
+      {
+        "id": "matrix_db_parity",
+        "label": "Buzz matrix matches DB signals (audit)",
+        "pass": true,
+        "detail": "0"
+      }
+    ],
+    "monthly_window": {
+      "end": "2026-05-31",
+      "start": "2025-06-01",
+      "months": [
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ]
+    },
+    "last_data_refresh": "Tourist presence: Airbnb snapshot 16 Jun 2026 | Landmarks: pageviews to 31 May 2026 | Events: Paris export 05 Oct 2026 (2025-10 to 2026-09)",
+    "buzz_ui_default_note": "Buzz map UI defaults to tourist presence + landmark attention; events off (patchy cell coverage). robust_gap precompute still evaluates all component-weight variants.",
+    "annual_monthly_consistency": {
+      "airbnb_tourist_presence": {
+        "spearman_annual_norm_vs_monthly_raw_mean": 0.9765,
+        "sum_monthly_review_counts": 531387,
+        "annual_n_underlying_reviews_12m": 530576,
+        "gap_note": "Monthly uses calendar months aligned to Airbnb snapshot; annual n_underlying uses rolling 365d from build date, expect mismatch."
+      },
+      "landmark_attention": {
+        "spearman_annual_norm_vs_monthly_raw_mean": 0.9995
+      },
+      "events_footfall": {
+        "spearman_annual_norm_vs_monthly_raw_mean": 0.773
+      }
+    },
+    "etag": "e0ae1993d8214f61"
+  },
+  "tier_legend": [
+    {
+      "tier": "Real",
+      "description": "Direct measurement of the target behavior."
+    },
+    {
+      "tier": "Proxy",
+      "description": "Open data standing in for the signal we want."
+    },
+    {
+      "tier": "Simulated",
+      "description": "Illustrative only; labeled and isolated."
+    },
+    {
+      "tier": "Not used",
+      "description": "Evaluated and rejected or parked, not in any build."
+    },
+    {
+      "tier": "Not accessible",
+      "description": "No compliant access path under product rules."
+    }
+  ],
+  "signals": [
+    {
+      "id": "airbnb_tourist_presence",
+      "name": "Airbnb tourist presence",
+      "tier": "Proxy",
+      "measures": "Short-term rental supply and review velocity per H3 cell: active listings, reviews in the last 12 months, and growth vs the prior 12 months (counts only).",
+      "source": "Inside Airbnb, Paris listings + reviews summary files (open download).",
+      "license": "Creative Commons CC0 1.0 (Inside Airbnb data use terms).",
+      "attribution": "© Inside Airbnb",
+      "granularity": "H3 cell (same grid as market_cell_stats)",
+      "refresh": "Monthly (when Inside Airbnb publishes a new Paris snapshot).",
+      "status": "loaded (listings=listings.csv.gz;reviews=reviews.csv.gz)",
+      "as_of": "2026-06-16",
+      "row_count": 1227,
+      "cell_coverage_pct": 78.48,
+      "caveat": "Proxy for visitor/tourist footfall, not restaurant buzz. Only listing coordinates and review dates are stored, no host or review text.",
+      "quality_checks": [
+        {
+          "id": "coverage",
+          "label": "Cells with signal > 0",
+          "pass": true,
+          "detail": "78.5% of grid (963/1227)"
+        },
+        {
+          "id": "missing",
+          "label": "Missing values",
+          "pass": true,
+          "detail": "0 missing"
+        },
+        {
+          "id": "outliers",
+          "label": "Outlier share (IQR rule)",
+          "pass": true,
+          "detail": "4.2%"
+        }
+      ],
+      "build_checksum": "7678b3d07e0bf1ee5f7240c21dd0df32ac6f08f245d62b3da4ef68d90fdcc64b"
+    },
+    {
+      "id": "landmark_attention",
+      "name": "Landmark attention",
+      "tier": "Proxy",
+      "measures": "Sum over landmarks within 600 m of cell center of log1p(90-day fr.wikipedia pageviews, human readers only) for OSM features tagged with a French Wikipedia article.",
+      "source": "OpenStreetMap landmarks + Wikimedia Pageviews API (fr.wikipedia, agent=user).",
+      "license": "ODbL (OSM); Wikimedia data under CC BY-SA 3.0 / API terms.",
+      "attribution": "© OpenStreetMap contributors · Wikimedia Foundation",
+      "granularity": "H3 cell (same grid as market_cell_stats)",
+      "refresh": "Weekly pageviews pull; landmarks refreshed on build.",
+      "status": "loaded",
+      "as_of": "2026-06-15",
+      "row_count": 1227,
+      "cell_coverage_pct": 73.84,
+      "caveat": "Encyclopedia readership proxies cultural attention, not dining-specific social buzz. Pageviews use Wikimedia agent=user (human traffic); redirect titles resolve to canonical articles.",
+      "quality_checks": [
+        {
+          "id": "coverage",
+          "label": "Cells with signal > 0",
+          "pass": true,
+          "detail": "73.8% of grid (906/1227)"
+        },
+        {
+          "id": "missing",
+          "label": "Missing values",
+          "pass": true,
+          "detail": "0 missing"
+        },
+        {
+          "id": "outliers",
+          "label": "Outlier share (IQR rule)",
+          "pass": false,
+          "detail": "9.5%"
+        }
+      ],
+      "build_checksum": "f994ef1e155556aac51ed6ad11901e0b13d0fda7bfd3a8ecb13319c2021271b7"
+    },
+    {
+      "id": "events_footfall",
+      "name": "Paris events footfall",
+      "tier": "Proxy",
+      "measures": "City open-data events geocoded to cells: count in the last 12 months and count in the upcoming 90 days (coordinates + dates only).",
+      "source": "Paris Open Data, dataset que-faire-a-paris- (export API).",
+      "license": "Open Database License (ODbL)",
+      "attribution": "© Ville de Paris, open data",
+      "granularity": "H3 cell (same grid as market_cell_stats)",
+      "refresh": "Weekly export.",
+      "status": "loaded",
+      "as_of": "2026-10-05",
+      "row_count": 1227,
+      "cell_coverage_pct": 42.79,
+      "caveat": "Official events calendar; excludes informal or social-only gatherings. Rolling windows anchor on the Paris export file date, not the Inside Airbnb snapshot.",
+      "quality_checks": [
+        {
+          "id": "coverage",
+          "label": "Cells with signal > 0",
+          "pass": true,
+          "detail": "42.8% of grid (525/1227)"
+        },
+        {
+          "id": "missing",
+          "label": "Missing values",
+          "pass": true,
+          "detail": "0 missing"
+        },
+        {
+          "id": "outliers",
+          "label": "Outlier share (IQR rule)",
+          "pass": false,
+          "detail": "10.9%"
+        }
+      ],
+      "build_checksum": "26991106078f18af726b9293c0d144d95b418f901939714c7317e715a3cf591e"
+    },
+    {
+      "id": "google_trends_cuisine",
+      "name": "Google Trends, cuisine",
+      "tier": "Not accessible",
+      "measures": "Weekly relative search interest by cuisine keyword for Île-de-France (official API gated; manual exports rejected by design).",
+      "source": "Google Trends (no compliant automated access in product).",
+      "license": "Google Terms of Service.",
+      "attribution": "Google Trends",
+      "granularity": "region-level, relative index, weekly",
+      "refresh": "Not used",
+      "status": "Not used: no automated access",
+      "as_of": null,
+      "row_count": null,
+      "cell_coverage_pct": null,
+      "caveat": "official API gated; manual exports rejected by design",
+      "quality_checks": [],
+      "build_checksum": null
+    },
+    {
+      "id": "sirene_establishments",
+      "name": "INSEE Sirene, food service establishments",
+      "tier": "Real",
+      "measures": "Administrative creation and closure dates for Paris food-service establishments (format groups from NAF), geolocated to H3 cells, counts only, no names or SIRET.",
+      "source": "INSEE Base Sirene stock + géolocalisation établissements (data.gouv.fr).",
+      "license": "Licence Ouverte / Open Licence 2.0",
+      "attribution": "© INSEE",
+      "granularity": "Establishment events aggregated to H3 cells",
+      "refresh": "Monthly Sirene stock (build via scripts/build_momentum.py).",
+      "status": "loaded (69 867 establishments)",
+      "as_of": "2026-10-01",
+      "row_count": 69867,
+      "cell_coverage_pct": 76.94,
+      "caveat": "Registry dates reflect administrative registration/closure, not trading days; NAF format groups are not cuisine; no revenue or engagement data. Personal data (sole traders) excluded, only salted establishment hashes stored.",
+      "quality_checks": [
+        {
+          "id": "loaded",
+          "label": "Source loaded",
+          "pass": true,
+          "detail": "loaded (69 867 establishments)"
+        },
+        {
+          "id": "row_count",
+          "label": "Establishments in momentum store",
+          "pass": true,
+          "detail": "69,867"
+        },
+        {
+          "id": "coverage",
+          "label": "Cells with establishments",
+          "pass": true,
+          "detail": "76.9% of grid"
+        }
+      ],
+      "build_checksum": "d45f4376f83a4ece701e5c3c015c52ce"
+    },
+    {
+      "id": "foursquare_footprint",
+      "name": "Foursquare place footprint",
+      "tier": "Not used",
+      "measures": "Venue place graph density (would require Foursquare Open Places).",
+      "source": "Foursquare Open Places (Hugging Face gated dataset).",
+      "license": "Apache 2.0 (dataset card; not ingested).",
+      "attribution": null,
+      "granularity": "H3 cell (not built)",
+      "refresh": "Not used",
+      "status": "Not used: NO-GO (Paris coverage not verified)",
+      "as_of": null,
+      "row_count": null,
+      "cell_coverage_pct": null,
+      "caveat": "NO-GO per foursquare_go_nogo.md: Paris coverage not verified, gated Parquet unreadable without HF token; no local slice on disk. Do not wire into builds until manual drop and checklist re-run.",
+      "quality_checks": [],
+      "build_checksum": null
+    },
+    {
+      "id": "simulated_virality",
+      "name": "Simulated social virality",
+      "tier": "Simulated",
+      "measures": "Illustrative attention surface for committee walkthroughs (not measured).",
+      "source": "Internal simulation (Phase 4).",
+      "license": null,
+      "attribution": null,
+      "granularity": "H3 cell",
+      "refresh": "N/A",
+      "status": "not built, Phase 4",
+      "as_of": null,
+      "row_count": null,
+      "cell_coverage_pct": null,
+      "caveat": "Clearly labeled Simulated; never mixed with Real or Proxy tiers.",
+      "quality_checks": [],
+      "build_checksum": null
+    },
+    {
+      "id": "instagram_tiktok_real",
+      "name": "Instagram / TikTok (platform APIs)",
+      "tier": "Not accessible",
+      "measures": "Post volume, hashtags, and creator reach on major social platforms.",
+      "source": "Meta Content Library / TikTok Research API (academic access).",
+      "license": null,
+      "attribution": null,
+      "granularity": "N/A",
+      "refresh": "N/A",
+      "status": "needs academic access: Meta Content Library / TikTok Research API; not pursued, future work",
+      "as_of": null,
+      "row_count": null,
+      "cell_coverage_pct": null,
+      "caveat": "No paid APIs and no scraping policy, not pursued in this product phase.",
+      "quality_checks": [],
+      "build_checksum": null
+    }
+  ],
+  "real_social_access": {
+    "summary": "Instagram, TikTok, Google Maps, TheFork, and TripAdvisor are not ingested. The product uses no paid APIs and does not scrape social platforms.",
+    "paths": [
+      {
+        "platform": "Meta (Instagram/Facebook)",
+        "access": "Meta Content Library, academic/research eligibility required.",
+        "status": "Not pursued in Phase 1"
+      },
+      {
+        "platform": "TikTok",
+        "access": "TikTok Research API, restricted research access.",
+        "status": "Not pursued in Phase 1"
+      }
+    ]
+  },
+  "attributions": [
+    {
+      "name": "© Inside Airbnb",
+      "license": "Creative Commons CC0 1.0 (Inside Airbnb data use terms).",
+      "signals": [
+        "airbnb_tourist_presence"
+      ]
+    },
+    {
+      "name": "© OpenStreetMap contributors · Wikimedia Foundation",
+      "license": "ODbL (OSM); Wikimedia data under CC BY-SA 3.0 / API terms.",
+      "signals": [
+        "landmark_attention"
+      ]
+    },
+    {
+      "name": "© Ville de Paris, open data",
+      "license": "Open Database License (ODbL)",
+      "signals": [
+        "events_footfall"
+      ]
+    },
+    {
+      "name": "© INSEE",
+      "license": "Licence Ouverte / Open Licence 2.0",
+      "signals": [
+        "sirene_establishments"
+      ]
+    }
+  ],
+  "server_ms": 0.02
+}

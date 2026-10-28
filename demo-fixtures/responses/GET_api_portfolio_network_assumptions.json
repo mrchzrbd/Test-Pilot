@@ -1,0 +1,40 @@
+{
+  "label": "MODELLED estimates, not measured sales",
+  "constants": {
+    "HUFF_DISTANCE_DECAY": 1.5,
+    "HUFF_DISTANCE_DECAY_SENSITIVITY": [
+      1,
+      1.5,
+      2
+    ],
+    "HUFF_MAX_REACH_SENSITIVITY": [
+      800,
+      1200,
+      2000
+    ],
+    "ATTRACTION_WEIGHT": 1,
+    "MAX_REACH_M": 1200,
+    "DETOUR_FACTOR": 1,
+    "NETWORK_CATCHMENT_RADII_M": [
+      300,
+      500,
+      1000
+    ],
+    "NETWORK_DEFAULT_RADIUS_M": 500
+  },
+  "methods": {
+    "captured_demand": "Huff gravity: P_ij ∝ A_j / d_ij^λ over viable H3 cells; demand weight D_i = population_density × income_index, else opportunity_score.",
+    "coverage": "Share of total demand weight D_i within radius_m of any site (haversine).",
+    "circle_overlap": "Lens overlap of equal circles, cross-check only; not sales diversion.",
+    "cannibalization": "MODELLED share of prior Huff capture lost at an existing site when candidates are added.",
+    "incremental_vs_shifted": "incremental_demand: Huff capture on cells inside the candidate MAX_REACH_M envelope outside every existing site reach; shifted_from_existing: capture on shared-reach cells reallocated from existing sites.",
+    "max_reach_m": "Modelling assumption: cells with no site within MAX_REACH_M (haversine × detour) are excluded from Huff allocation; reach_sensitivity varies 800 / 1200 / 2000 m at default decay.",
+    "distance_decay": "Modelling assumption: Huff weight ∝ A / d^λ; decay_sensitivity varies λ at default reach."
+  },
+  "data_sources": {
+    "grid": "area_cells (INSEE IRIS demographics, OSM competitive/digital/footfall proxies, DVF rent)",
+    "demand_weight": "population_density × income_index per cell_demographics_demand_index"
+  },
+  "viable_cell_count": 940,
+  "last_data_refresh": "2026-10-22T20:12:33.746570+00:00"
+}

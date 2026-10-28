@@ -1,0 +1,203 @@
+{
+  "city_id": 1,
+  "data_version": "61254d27963ebb7a39222e06170c8e3f",
+  "meta": {
+    "release_date": "October 2026",
+    "analysis_end": "June 2026",
+    "provisional_months": null,
+    "tier_counts": {
+      "Real": 1,
+      "Proxy": 3,
+      "Simulated": 1,
+      "Not accessible": 2,
+      "Not used": 1
+    },
+    "evidence_signals": [
+      {
+        "id": "airbnb_tourist_presence",
+        "display_name": "Tourist presence",
+        "verdict": "No evidence",
+        "tier": "Proxy",
+        "primary_design": "B"
+      },
+      {
+        "id": "landmark_attention",
+        "display_name": "Landmark attention",
+        "verdict": "No evidence",
+        "tier": "Proxy",
+        "primary_design": "A"
+      },
+      {
+        "id": "events_footfall",
+        "display_name": "Events footfall",
+        "verdict": "No evidence",
+        "tier": "Proxy",
+        "primary_design": "A"
+      }
+    ]
+  },
+  "hero": {
+    "headline_template": "Attention helps stress-test demand; it does not predict openings. Paris added {city_net} net restaurants in {window_phrase}, led by {led_area}.",
+    "slots": {
+      "city_net": "1,442",
+      "window_phrase": "the 24 months to June 2026",
+      "led_area": "the 8th arrondissement"
+    },
+    "footnote": null,
+    "rate_tooltip": "Net openings use SIRENE registrations in the 24-month window ending at analysis end; provisional months may revise.",
+    "city_net_24m": 1442,
+    "led_by_area": "8th arrondissement",
+    "analysis_end": "2026-06",
+    "window_24m": "24 months"
+  },
+  "cards": [
+    {
+      "id": "stress",
+      "question": "If online attention fades, what happens to demand?",
+      "headline_template": "Reference case: steady structural demand runs 0.4 percentage points below break-even.",
+      "slots": {},
+      "footnote": "At break-even. Structural coverage sits on the break-even line; small demand shifts move payback materially.",
+      "caveat": "Illustrative Monte Carlo, not a revenue forecast.",
+      "display_number": -0.4,
+      "number_unit": "percentage points vs break-even",
+      "number_tooltip": "Structural margin vs break-even (-0.4 pp). Same reference cell and presets as the stress test summary (trend shock, 110% break-even).",
+      "tier": "Simulated",
+      "as_of": "October 2026",
+      "as_of_tooltip": "Stress engine snapshot; see stress test page for parameters.",
+      "link": {
+        "path": "/digital/stress-test",
+        "label": "Open stress test"
+      },
+      "source": {
+        "endpoint": "/api/digital/stress/run",
+        "field": "metrics.structural_margin_pct"
+      }
+    },
+    {
+      "id": "lifecycle",
+      "question": "Where are venues in their lifecycle?",
+      "headline_template": "{unclassified_pct}% of cells are not yet classified; of the {classified_pct}% that are classified, {peak_share}% are in the {peak_stage} stage.",
+      "slots": {
+        "unclassified_pct": "92.4",
+        "classified_pct": "7.6",
+        "peak_stage": "Peak",
+        "peak_share": "52.1"
+      },
+      "footnote": "Cell-level stages; thin or low-signal cells stay unclassified.",
+      "caveat": null,
+      "display_number": 7.6,
+      "number_unit": "of cells classified",
+      "metric_secondary": "52.1% in Peak among classified",
+      "number_tooltip": "Largest classified stage: Peak (52.1% of classified cells).",
+      "tier": "Proxy",
+      "as_of": "October 2026",
+      "as_of_tooltip": "Lifecycle uses Sirene momentum plus digital buzz percentiles.",
+      "link": {
+        "path": "/digital/lifecycle",
+        "label": "Open lifecycle"
+      },
+      "source": {
+        "endpoint": "/api/digital/lifecycle/summary",
+        "field": "stage_distribution"
+      }
+    },
+    {
+      "id": "buzz",
+      "question": "Where is digital attention highest and lowest?",
+      "headline_template": "Highest buzz in {top_area}; lowest in {bottom_area}.",
+      "slots": {
+        "top_area": "3rd arrondissement",
+        "bottom_area": "12th arrondissement"
+      },
+      "footnote": null,
+      "caveat": null,
+      "display_number": 92,
+      "number_unit": "buzz index (0–100 percentile)",
+      "number_tooltip": "Buzz index is the mean of enabled city percentiles (0–100; typical cell ≈ 50). Top arrondissement mean: 92.",
+      "number_scale": "city median ≈ 50",
+      "tier": "Proxy",
+      "as_of": "June 2026",
+      "as_of_tooltip": "Mean of enabled normalized components (default: all three, equal weight). Sources: Tourist presence: Proxy, Landmark attention: Proxy, Events: Proxy. Snapshot dates: events_footfall October 2026, landmark_attention June 2026, airbnb_tourist_presence June 2026.",
+      "link": {
+        "path": "/digital/buzz-map",
+        "label": "Open buzz map"
+      },
+      "source": {
+        "endpoint": "/api/digital/buzz/matrix",
+        "field": "airbnb_n+landmark_n by area"
+      }
+    },
+    {
+      "id": "momentum",
+      "question": "How is the Paris restaurant network changing?",
+      "headline_template": "{city_net} net openings in {window_phrase}. Fastest area: {fast_area}; slowest: {slow_area}.",
+      "slots": {
+        "city_net": "1,442",
+        "window_phrase": "24 months to June 2026",
+        "fast_area": "8th arrondissement",
+        "slow_area": "20th arrondissement"
+      },
+      "footnote": null,
+      "caveat": null,
+      "display_number": 1442,
+      "number_unit": "city net openings (24m)",
+      "number_tooltip": "SIRENE net registrations summed across areas in the window.",
+      "tier": "Real",
+      "as_of": "June 2026",
+      "as_of_tooltip": "Net openings use SIRENE registrations in the 24-month window ending at analysis end; provisional months may revise.",
+      "link": {
+        "path": "/digital/momentum/areas",
+        "label": "Open momentum"
+      },
+      "source": {
+        "endpoint": "/api/momentum/areas",
+        "field": "profiles.net_24m"
+      }
+    },
+    {
+      "id": "evidence",
+      "question": "Does attention predict openings?",
+      "headline_template": "Tourist activity: no sign it predicts openings. Landmarks and events: only checked for the same period, no clear link.",
+      "slots": {},
+      "footnote": null,
+      "caveat": "Lead-lag tests are for screening only, not site recommendations.",
+      "display_number": -0.029,
+      "number_unit": "forward association",
+      "number_tooltip": "Tourist forward association (lead-lag): -0.029.",
+      "tier": "Proxy",
+      "as_of": null,
+      "as_of_tooltip": "Evidence pack release; see Evidence tab for designs.",
+      "link": {
+        "path": "/digital/evidence",
+        "tab": "Over time",
+        "label": "Open evidence"
+      },
+      "source": {
+        "endpoint": "/api/digital/evidence",
+        "field": "lead_lag.forward.rho"
+      }
+    }
+  ],
+  "sources_card": {
+    "display_number": 1,
+    "tier": "Real",
+    "as_of": null,
+    "link": {
+      "path": "/digital/sources",
+      "label": "Open signal sources"
+    },
+    "source": {
+      "endpoint": "/api/digital/signals/registry",
+      "field": "tier counts"
+    }
+  },
+  "etag_parts": {
+    "evidence": "194fb1efc8807f1af97e989543ae5377",
+    "registry": "e0ae1993d8214f61",
+    "buzz": "b33c888dfff5f98e0c9e7519ec3fc7cc",
+    "momentum": "d45f4376f83a4ece701e5c3c015c52ce",
+    "lifecycle": "7d4f2ea420923d1c4ae3e4ed4b30ce82",
+    "stress": "fa11f7aa73dc674e"
+  },
+  "server_ms": 5861.53
+}

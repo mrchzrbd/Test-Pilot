@@ -1,0 +1,16 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Paris",
+      "country": "France",
+      "bbox_min_lat": 48.8155755,
+      "bbox_min_lng": 2.224122,
+      "bbox_max_lat": 48.902156,
+      "bbox_max_lng": 2.4697602,
+      "h3_resolution": 9,
+      "is_seeded": true,
+      "cell_count": 1227
+    }
+  ]
+}

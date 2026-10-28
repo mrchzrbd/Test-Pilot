@@ -1,0 +1,1 @@
+import{j as s}from"./main-BWiVaK3s.js";import{a}from"./IntelligenceCityHeader-hTVZ3tVd.js";import{A as e}from"./AssistantSectionGuide-CnNYDq23.js";const i="_row_10nmj_1",m={row:i};function x({sectionId:n,title:r,icon:t,children:o}){return s.jsxs("div",{className:m.row,children:[t?s.jsx(a,{icon:t,children:o}):o,s.jsx(e,{sectionId:n,title:r})]})}export{x as A};

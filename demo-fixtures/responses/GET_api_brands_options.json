@@ -1,0 +1,76 @@
+{
+  "brand_status": [
+    "active",
+    "paused",
+    "discontinued"
+  ],
+  "concept_type": [
+    "fast-casual",
+    "QSR",
+    "casual-dining",
+    "fine-dining",
+    "cafe",
+    "bakery",
+    "bar",
+    "bistro"
+  ],
+  "cuisine_type": [
+    "Italian",
+    "Japanese",
+    "Lebanese",
+    "Vietnamese",
+    "French",
+    "Mexican",
+    "Indian",
+    "Chinese",
+    "Korean",
+    "Thai",
+    "Spanish",
+    "Greek",
+    "American",
+    "Mediterranean",
+    "Turkish",
+    "Ethiopian",
+    "Georgian",
+    "Peruvian",
+    "Brazilian",
+    "Moroccan",
+    "Filipino",
+    "Indonesian",
+    "Caribbean",
+    "Fusion",
+    "Other"
+  ],
+  "service_model": [
+    "dine-in",
+    "delivery-only",
+    "takeaway-only",
+    "hybrid"
+  ],
+  "price_point": [
+    "€",
+    "€€",
+    "€€€",
+    "€€€€"
+  ],
+  "target_demographic": [
+    "families",
+    "young professionals",
+    "students",
+    "tourists",
+    "business/corporate",
+    "general/mass-market"
+  ],
+  "format_size": [
+    "small",
+    "medium",
+    "large"
+  ],
+  "delivery_platforms": [
+    "UberEats",
+    "Deliveroo",
+    "own app",
+    "other",
+    "none"
+  ]
+}

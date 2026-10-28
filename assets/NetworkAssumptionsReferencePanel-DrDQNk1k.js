@@ -1,0 +1,1 @@
+import{j as n}from"./main-BWiVaK3s.js";import{a as l}from"./NetworkOverview.module-DsUoKkBL.js";function m({title:e,note:o,rowCount:s,testId:t,layout:r="natural",children:a}){return n.jsx(l,{title:e,note:o,rowCount:s,showResultCount:!1,showFooter:!1,layout:r,testId:t,children:a})}export{m as N};

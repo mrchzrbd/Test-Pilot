@@ -1,0 +1,83 @@
+{
+  "brands": [
+    {
+      "id": 2,
+      "company_id": 1,
+      "created_at": "2026-10-22T19:33:46.367213Z",
+      "name": "L'Atelier Entrecôte & Volaille",
+      "status": "active",
+      "concept_type": "casual-dining",
+      "price_point": "€€",
+      "service_model": "dine-in",
+      "cuisine_type": [
+        "French"
+      ],
+      "average_check_size": 35,
+      "average_check_currency": "EUR",
+      "year_established": 2018,
+      "typical_seating_capacity": null,
+      "delivery_platform_presence": [],
+      "target_demographic": [
+        "general/mass-market"
+      ],
+      "format_size": null,
+      "logo_url": "https://www.trispanllp.com/trispan-core/core-content/wp-content/core-media/2023/05/Logo_Atelier_avec-Barre-T_VECTORISE_021023_Page_1.jpg",
+      "logo_tile_background": null,
+      "locations_count": 3
+    },
+    {
+      "id": 3,
+      "company_id": 1,
+      "created_at": "2026-10-22T19:33:46.408581Z",
+      "name": "Sushi Shop",
+      "status": "active",
+      "concept_type": "fast-casual",
+      "price_point": "€€",
+      "service_model": "hybrid",
+      "cuisine_type": [
+        "Japanese"
+      ],
+      "average_check_size": 22,
+      "average_check_currency": "EUR",
+      "year_established": 1998,
+      "typical_seating_capacity": null,
+      "delivery_platform_presence": [
+        "own-delivery"
+      ],
+      "target_demographic": [
+        "general/mass-market"
+      ],
+      "format_size": null,
+      "logo_url": "https://www.sushishop.fr/static/favicons/android-chrome-192x192.png",
+      "logo_tile_background": null,
+      "locations_count": 16
+    },
+    {
+      "id": 4,
+      "company_id": 1,
+      "created_at": "2026-10-22T19:33:46.485822Z",
+      "name": "Tortilla",
+      "status": "active",
+      "concept_type": "fast-casual",
+      "price_point": "€",
+      "service_model": "hybrid",
+      "cuisine_type": [
+        "Mexican"
+      ],
+      "average_check_size": 14,
+      "average_check_currency": "EUR",
+      "year_established": 2007,
+      "typical_seating_capacity": null,
+      "delivery_platform_presence": [
+        "own-delivery"
+      ],
+      "target_demographic": [
+        "general/mass-market"
+      ],
+      "format_size": null,
+      "logo_url": "https://www.fr.tortilla.co/assets/images/tortilla-logo.svg",
+      "logo_tile_background": "#C41230",
+      "locations_count": 3
+    }
+  ]
+}

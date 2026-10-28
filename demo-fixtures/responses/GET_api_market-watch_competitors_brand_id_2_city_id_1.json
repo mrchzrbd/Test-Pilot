@@ -1,0 +1,249 @@
+{
+  "brand_id": 2,
+  "city_id": 1,
+  "rule": "Competitors are venues whose cuisine group matches the brand’s cuisine types, excluding venues whose name contains “L'Atelier Entrecôte & Volaille”.",
+  "locations": [
+    {
+      "location_id": 1,
+      "name": "Paris 2",
+      "lat": 48.868346,
+      "lng": 2.343277,
+      "counts": {
+        "300": 18,
+        "500": 60,
+        "1000": 190
+      },
+      "pressure": "High",
+      "pressure_pct": 84.8,
+      "nearest": [
+        {
+          "name": "Au Petit Trou",
+          "lat": 48.8688977,
+          "lng": 2.3439381,
+          "distance_m": 78,
+          "digital": {
+            "website": false,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Gallopin",
+          "lat": 48.8688297,
+          "lng": 2.3421626,
+          "distance_m": 98,
+          "digital": {
+            "website": true,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "La petite bourse",
+          "lat": 48.8692171,
+          "lng": 2.3429775,
+          "distance_m": 99,
+          "digital": {
+            "website": false,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Café Moderne",
+          "lat": 48.8689038,
+          "lng": 2.3422059,
+          "distance_m": 100,
+          "digital": {
+            "website": false,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Le Nom m'échappe",
+          "lat": 48.8680539,
+          "lng": 2.3418155,
+          "distance_m": 112,
+          "digital": {
+            "website": true,
+            "instagram": true,
+            "facebook": true
+          },
+          "is_chain": false
+        }
+      ],
+      "chain_split": {
+        "chain": 1,
+        "independent": 59
+      },
+      "summary": "60 competitors within 500 m, higher than 84% of Paris; 59 of them are independents."
+    },
+    {
+      "location_id": 2,
+      "name": "Paris 4",
+      "lat": 48.85528,
+      "lng": 2.36836,
+      "counts": {
+        "300": 21,
+        "500": 45,
+        "1000": 124
+      },
+      "pressure": "High",
+      "pressure_pct": 77.1,
+      "nearest": [
+        {
+          "name": "Auberge Chez Rosito",
+          "lat": 48.8559345,
+          "lng": 2.3677386,
+          "distance_m": 86,
+          "digital": {
+            "website": false,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "L'Ange 20",
+          "lat": 48.8558432,
+          "lng": 2.367403,
+          "distance_m": 94,
+          "digital": {
+            "website": true,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Café Hugo",
+          "lat": 48.855938,
+          "lng": 2.3667622,
+          "distance_m": 138,
+          "digital": {
+            "website": false,
+            "instagram": true,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Bistrot des Tournelles",
+          "lat": 48.8541336,
+          "lng": 2.3674336,
+          "distance_m": 144,
+          "digital": {
+            "website": true,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Brasserie Bofinger",
+          "lat": 48.8539095,
+          "lng": 2.3680433,
+          "distance_m": 154,
+          "digital": {
+            "website": true,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        }
+      ],
+      "chain_split": {
+        "chain": 1,
+        "independent": 44
+      },
+      "summary": "45 competitors within 500 m, higher than 77% of Paris; 44 of them are independents."
+    },
+    {
+      "location_id": 3,
+      "name": "Paris 17",
+      "lat": 48.879475,
+      "lng": 2.284277,
+      "counts": {
+        "300": 9,
+        "500": 16,
+        "1000": 52
+      },
+      "pressure": "Typical",
+      "pressure_pct": 39.2,
+      "nearest": [
+        {
+          "name": "Le Sud",
+          "lat": 48.8788664,
+          "lng": 2.2847106,
+          "distance_m": 75,
+          "digital": {
+            "website": false,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Le Ballon des Ternes",
+          "lat": 48.8804973,
+          "lng": 2.2853562,
+          "distance_m": 138,
+          "digital": {
+            "website": true,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Chez Bertrand",
+          "lat": 48.880432,
+          "lng": 2.285658,
+          "distance_m": 147,
+          "digital": {
+            "website": false,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Le Relais de Venise",
+          "lat": 48.8780291,
+          "lng": 2.2851108,
+          "distance_m": 172,
+          "digital": {
+            "website": true,
+            "instagram": false,
+            "facebook": true
+          },
+          "is_chain": false
+        },
+        {
+          "name": "Chez Georges",
+          "lat": 48.8778621,
+          "lng": 2.2848987,
+          "distance_m": 185,
+          "digital": {
+            "website": true,
+            "instagram": false,
+            "facebook": false
+          },
+          "is_chain": false
+        }
+      ],
+      "chain_split": {
+        "chain": 0,
+        "independent": 16
+      },
+      "summary": "16 competitors within 500 m, higher than 39% of Paris; 16 of them are independents."
+    }
+  ],
+  "portfolio_summary": "2 of 3 locations face high pressure",
+  "server_ms": 1277.38
+}

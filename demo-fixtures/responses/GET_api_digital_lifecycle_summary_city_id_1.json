@@ -1,0 +1,5142 @@
+{
+  "funnel": {
+    "steps": {
+      "viable": 940,
+      "classified": 71,
+      "not_low_signal": 898,
+      "not_thin_supply": 349
+    },
+    "by_format": {
+      "all": {
+        "viable": 940,
+        "classified": 71,
+        "not_low_signal": 898,
+        "not_thin_supply": 349
+      },
+      "fast_food": {
+        "viable": 940,
+        "classified": 51,
+        "not_low_signal": 898,
+        "not_thin_supply": 259
+      },
+      "bars_cafes": {
+        "viable": 940,
+        "classified": 2,
+        "not_low_signal": 898,
+        "not_thin_supply": 38
+      },
+      "traditional_restaurant": {
+        "viable": 940,
+        "classified": 79,
+        "not_low_signal": 898,
+        "not_thin_supply": 340
+      }
+    }
+  },
+  "city_id": 1,
+  "stability": {
+    "share_changed": 0.212,
+    "compared_cells": 349,
+    "typology_areas": {
+      "note": "Buzz, saturation, and net openings are snapshots; only attention trend uses 12m / 9m windows.",
+      "areas_compared": 40,
+      "share_12m_vs_last_9m": 0.15,
+      "share_12m_vs_first_9m": 0.3,
+      "borderline_stage_changes_12m_vs_last_9m": 3,
+      "borderline_stage_changes_12m_vs_first_9m": 4
+    },
+    "stage_changes_6m_vs_12m": 74
+  },
+  "board_meta": {
+    "min_classifiable_areas": 12,
+    "paris_arrondissement_count": 20,
+    "outside_arrondissement_cells": 95
+  },
+  "thresholds": {
+    "precedence": [
+      "gate",
+      "Fading",
+      "Emerging",
+      "Saturated",
+      "Peak",
+      "Unclassified"
+    ],
+    "source_tag": "cell-level absolute (unchanged for drill-down)",
+    "rule_version": "2.0.0",
+    "sat_high_min": 75,
+    "buzz_peak_min": 65,
+    "sat_peak_band": [
+      45,
+      78
+    ],
+    "net_per_venue_positive": 0.03,
+    "net_per_venue_near_zero": -0.02,
+    "trend_shrink_min_months": 6,
+    "trend_flat_abs_pct_per_month": 0.45,
+    "trend_clearly_negative_pct_per_month": -0.75,
+    "trend_clearly_positive_pct_per_month": 0.75
+  },
+  "data_sources": {
+    "momentum": "momentum_cell_summary + momentum_survival",
+    "saturation": "market_cell_stats own_count percentile",
+    "buzz_matrix_etag": "b33c888dfff5f98e0c9e7519ec3fc7cc",
+    "digital_cell_month": "tourist + landmark, 12 months"
+  },
+  "rule_version": "2.0.0",
+  "area_typology": {
+    "quadrants": {
+      "Q-EMG": "momentum ≥ median AND fullness < median → Emerging",
+      "Q-SAT": "momentum < median AND fullness ≥ median → Saturated",
+      "Q-FADE": "momentum < median AND fullness < median → Fading",
+      "Q-PEAK": "momentum ≥ median AND fullness ≥ median → Peak"
+    },
+    "source_tag": "relative-rank (quadrant)",
+    "low_evidence": "Fewer than 100 active venues (board may still place if ≥ 30)",
+    "fullness_input": "saturation rank percentile (format-specific)",
+    "momentum_input": "attention_trend rank percentile (format-independent across 20 arrondissements)",
+    "median_rank_cut": 50,
+    "not_enough_data": "Missing momentum or fullness rank, or fewer than 30 active venues of this format",
+    "supporting_ranks": "Buzz and net openings rank percentiles are shown on cards only, not used in quadrant placement.",
+    "typology_version": "4.0.0",
+    "borderline_within": 10,
+    "saturation_source": "Venue-weighted mean of market_cell_stats-derived saturation percentile across all H3 cells in the arrondissement (not gated by site viability).",
+    "attention_buzz_source": "Format-independent: venue-weighted over non-low-signal cells; weights = all-format Sirene active_now.",
+    "min_venues_not_enough": 30,
+    "min_venues_low_evidence": 100,
+    "min_profiled_areas_for_board": 12
+  },
+  "format_groups": [
+    {
+      "id": "all",
+      "label": "All formats"
+    },
+    {
+      "id": "traditional_restaurant",
+      "label": "Traditional restaurant"
+    },
+    {
+      "id": "fast_food",
+      "label": "Fast food/takeaway"
+    },
+    {
+      "id": "bars_cafes",
+      "label": "Bars and cafes"
+    }
+  ],
+  "arrondissements": [
+    {
+      "area": "1st arrondissement",
+      "evidence": {
+        "total_cells": 14,
+        "venue_count": 1314,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 1
+      },
+      "area_rule": {
+        "stage": "Peak",
+        "rule_id": "Q-PEAK",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Peak",
+      "borderline": true,
+      "total_cells": 14,
+      "venue_count": 1314,
+      "stage_counts": {
+        "Peak": 1,
+        "Unclassified": 13
+      },
+      "viable_cells": 14,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Peak",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7572815533980582,
+        "venue_count": 1314,
+        "buzz_percentile": 95.574,
+        "saturation_percentile": 90.704,
+        "net_openings_24m_per_venue": 0.0556,
+        "attention_trend_pct_per_month": 0.1183
+      },
+      "classified_cells": 1,
+      "classified_share": 0.0714,
+      "rank_percentiles": {
+        "buzz": 89.47,
+        "saturation": 89.47,
+        "net_openings": 68.42,
+        "attention_trend": 52.63
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 2.63
+    },
+    {
+      "area": "2nd arrondissement",
+      "evidence": {
+        "total_cells": 10,
+        "venue_count": 1299,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 2
+      },
+      "area_rule": {
+        "stage": "Saturated",
+        "rule_id": "Q-SAT",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Saturated",
+      "borderline": false,
+      "total_cells": 10,
+      "venue_count": 1299,
+      "stage_counts": {
+        "Saturated": 2,
+        "Unclassified": 8
+      },
+      "viable_cells": 10,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Saturated",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7094017094017094,
+        "venue_count": 1299,
+        "buzz_percentile": 95.0167,
+        "saturation_percentile": 96.9167,
+        "net_openings_24m_per_venue": 0.0701,
+        "attention_trend_pct_per_month": 0.0293
+      },
+      "classified_cells": 2,
+      "classified_share": 0.2,
+      "rank_percentiles": {
+        "buzz": 84.21,
+        "saturation": 100,
+        "net_openings": 89.47,
+        "attention_trend": 21.05
+      },
+      "cell_dominant_stage": "Saturated",
+      "distance_to_nearest_cut": 28.95
+    },
+    {
+      "area": "3rd arrondissement",
+      "evidence": {
+        "total_cells": 13,
+        "venue_count": 959,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 0
+      },
+      "area_rule": {
+        "stage": "Saturated",
+        "rule_id": "Q-SAT",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Saturated",
+      "borderline": false,
+      "total_cells": 13,
+      "venue_count": 959,
+      "stage_counts": {
+        "Unclassified": 13
+      },
+      "viable_cells": 13,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Saturated",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.75,
+        "venue_count": 959,
+        "buzz_percentile": 97.5815,
+        "saturation_percentile": 90.4397,
+        "net_openings_24m_per_venue": 0.0594,
+        "attention_trend_pct_per_month": 0.0034
+      },
+      "classified_cells": 0,
+      "classified_share": 0,
+      "rank_percentiles": {
+        "buzz": 100,
+        "saturation": 84.21,
+        "net_openings": 73.68,
+        "attention_trend": 5.26
+      },
+      "cell_dominant_stage": "Unclassified",
+      "distance_to_nearest_cut": 34.21
+    },
+    {
+      "area": "4th arrondissement",
+      "evidence": {
+        "total_cells": 11,
+        "venue_count": 939,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 3
+      },
+      "area_rule": {
+        "stage": "Saturated",
+        "rule_id": "Q-SAT",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Saturated",
+      "borderline": true,
+      "total_cells": 11,
+      "venue_count": 939,
+      "stage_counts": {
+        "Saturated": 3,
+        "Unclassified": 8
+      },
+      "viable_cells": 11,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Saturated",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7432432432432432,
+        "venue_count": 939,
+        "buzz_percentile": 95.6901,
+        "saturation_percentile": 86.9569,
+        "net_openings_24m_per_venue": 0.0724,
+        "attention_trend_pct_per_month": 0.0779
+      },
+      "classified_cells": 3,
+      "classified_share": 0.2727,
+      "rank_percentiles": {
+        "buzz": 94.74,
+        "saturation": 73.68,
+        "net_openings": 94.74,
+        "attention_trend": 42.11
+      },
+      "cell_dominant_stage": "Saturated",
+      "distance_to_nearest_cut": 7.89
+    },
+    {
+      "area": "5th arrondissement",
+      "evidence": {
+        "total_cells": 23,
+        "venue_count": 1358,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 6
+      },
+      "area_rule": {
+        "stage": "Saturated",
+        "rule_id": "Q-SAT",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Saturated",
+      "borderline": false,
+      "total_cells": 23,
+      "venue_count": 1358,
+      "stage_counts": {
+        "Peak": 3,
+        "Saturated": 3,
+        "Unclassified": 17
+      },
+      "viable_cells": 23,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Saturated",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7203389830508474,
+        "venue_count": 1358,
+        "buzz_percentile": 89.2944,
+        "saturation_percentile": 87.5556,
+        "net_openings_24m_per_venue": 0.0376,
+        "attention_trend_pct_per_month": 0.0035
+      },
+      "classified_cells": 6,
+      "classified_share": 0.2609,
+      "rank_percentiles": {
+        "buzz": 73.68,
+        "saturation": 78.95,
+        "net_openings": 36.84,
+        "attention_trend": 10.53
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 28.95
+    },
+    {
+      "area": "6th arrondissement",
+      "evidence": {
+        "total_cells": 16,
+        "venue_count": 1030,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 3
+      },
+      "area_rule": {
+        "stage": "Saturated",
+        "rule_id": "Q-SAT",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Saturated",
+      "borderline": true,
+      "total_cells": 16,
+      "venue_count": 1030,
+      "stage_counts": {
+        "Peak": 1,
+        "Fading": 1,
+        "Saturated": 1,
+        "Unclassified": 13
+      },
+      "viable_cells": 16,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Saturated",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.6447368421052632,
+        "venue_count": 1030,
+        "buzz_percentile": 90.0309,
+        "saturation_percentile": 84.9805,
+        "net_openings_24m_per_venue": 0.0553,
+        "attention_trend_pct_per_month": 0.0312
+      },
+      "classified_cells": 3,
+      "classified_share": 0.1875,
+      "rank_percentiles": {
+        "buzz": 78.95,
+        "saturation": 57.89,
+        "net_openings": 63.16,
+        "attention_trend": 26.32
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 7.89
+    },
+    {
+      "area": "7th arrondissement",
+      "evidence": {
+        "total_cells": 38,
+        "venue_count": 806,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 3
+      },
+      "area_rule": {
+        "stage": "Fading",
+        "rule_id": "Q-FADE",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Fading",
+      "borderline": false,
+      "total_cells": 38,
+      "venue_count": 806,
+      "stage_counts": {
+        "Peak": 2,
+        "Saturated": 1,
+        "Unclassified": 35
+      },
+      "viable_cells": 38,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Fading",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7291666666666666,
+        "venue_count": 806,
+        "buzz_percentile": 78.0333,
+        "saturation_percentile": 62.2553,
+        "net_openings_24m_per_venue": 0.0409,
+        "attention_trend_pct_per_month": 0.0132
+      },
+      "classified_cells": 3,
+      "classified_share": 0.0789,
+      "rank_percentiles": {
+        "buzz": 47.37,
+        "saturation": 26.32,
+        "net_openings": 42.11,
+        "attention_trend": 15.79
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 23.68
+    },
+    {
+      "area": "8th arrondissement",
+      "evidence": {
+        "total_cells": 40,
+        "venue_count": 2090,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 4
+      },
+      "area_rule": {
+        "stage": "Peak",
+        "rule_id": "Q-PEAK",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Peak",
+      "borderline": true,
+      "total_cells": 40,
+      "venue_count": 2090,
+      "stage_counts": {
+        "Peak": 1,
+        "Saturated": 3,
+        "Unclassified": 36
+      },
+      "viable_cells": 40,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Peak",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.6967741935483871,
+        "venue_count": 2090,
+        "buzz_percentile": 79.0703,
+        "saturation_percentile": 79.5506,
+        "net_openings_24m_per_venue": 0.1057,
+        "attention_trend_pct_per_month": 0.5546
+      },
+      "classified_cells": 4,
+      "classified_share": 0.1,
+      "rank_percentiles": {
+        "buzz": 52.63,
+        "saturation": 52.63,
+        "net_openings": 100,
+        "attention_trend": 84.21
+      },
+      "cell_dominant_stage": "Saturated",
+      "distance_to_nearest_cut": 2.63
+    },
+    {
+      "area": "9th arrondissement",
+      "evidence": {
+        "total_cells": 23,
+        "venue_count": 2289,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 5
+      },
+      "area_rule": {
+        "stage": "Peak",
+        "rule_id": "Q-PEAK",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Peak",
+      "borderline": false,
+      "total_cells": 23,
+      "venue_count": 2289,
+      "stage_counts": {
+        "Peak": 1,
+        "Saturated": 4,
+        "Unclassified": 18
+      },
+      "viable_cells": 23,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Peak",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.776536312849162,
+        "venue_count": 2289,
+        "buzz_percentile": 87.0582,
+        "saturation_percentile": 93.9049,
+        "net_openings_24m_per_venue": 0.0341,
+        "attention_trend_pct_per_month": 0.2762
+      },
+      "classified_cells": 5,
+      "classified_share": 0.2174,
+      "rank_percentiles": {
+        "buzz": 68.42,
+        "saturation": 94.74,
+        "net_openings": 26.32,
+        "attention_trend": 68.42
+      },
+      "cell_dominant_stage": "Saturated",
+      "distance_to_nearest_cut": 18.42
+    },
+    {
+      "area": "10th arrondissement",
+      "evidence": {
+        "total_cells": 30,
+        "venue_count": 2142,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 2
+      },
+      "area_rule": {
+        "stage": "Peak",
+        "rule_id": "Q-PEAK",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Peak",
+      "borderline": true,
+      "total_cells": 30,
+      "venue_count": 2142,
+      "stage_counts": {
+        "Peak": 1,
+        "Saturated": 1,
+        "Unclassified": 28
+      },
+      "viable_cells": 30,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Peak",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7751479289940828,
+        "venue_count": 2142,
+        "buzz_percentile": 82.4223,
+        "saturation_percentile": 86.3098,
+        "net_openings_24m_per_venue": 0.0523,
+        "attention_trend_pct_per_month": 0.1797
+      },
+      "classified_cells": 2,
+      "classified_share": 0.0667,
+      "rank_percentiles": {
+        "buzz": 57.89,
+        "saturation": 63.16,
+        "net_openings": 55.26,
+        "attention_trend": 57.89
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 7.89
+    },
+    {
+      "area": "11th arrondissement",
+      "evidence": {
+        "total_cells": 36,
+        "venue_count": 2429,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 7
+      },
+      "area_rule": {
+        "stage": "Saturated",
+        "rule_id": "Q-SAT",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+      },
+      "area_stage": "Saturated",
+      "borderline": false,
+      "total_cells": 36,
+      "venue_count": 2429,
+      "stage_counts": {
+        "Peak": 6,
+        "Saturated": 1,
+        "Unclassified": 29
+      },
+      "viable_cells": 36,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Saturated",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.6894977168949772,
+        "venue_count": 2429,
+        "buzz_percentile": 83.3869,
+        "saturation_percentile": 86.9387,
+        "net_openings_24m_per_venue": 0.0523,
+        "attention_trend_pct_per_month": 0.0342
+      },
+      "classified_cells": 7,
+      "classified_share": 0.1944,
+      "rank_percentiles": {
+        "buzz": 63.16,
+        "saturation": 68.42,
+        "net_openings": 55.26,
+        "attention_trend": 31.58
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 18.42
+    },
+    {
+      "area": "12th arrondissement",
+      "evidence": {
+        "total_cells": 61,
+        "venue_count": 1553,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 4
+      },
+      "area_rule": {
+        "stage": "Emerging",
+        "rule_id": "Q-EMG",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Emerging",
+      "borderline": false,
+      "total_cells": 61,
+      "venue_count": 1553,
+      "stage_counts": {
+        "Peak": 2,
+        "Saturated": 2,
+        "Unclassified": 57
+      },
+      "viable_cells": 61,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Emerging",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7258064516129032,
+        "venue_count": 1553,
+        "buzz_percentile": 56.6612,
+        "saturation_percentile": 63.3266,
+        "net_openings_24m_per_venue": 0.0322,
+        "attention_trend_pct_per_month": 0.6087
+      },
+      "classified_cells": 4,
+      "classified_share": 0.0656,
+      "rank_percentiles": {
+        "buzz": 15.79,
+        "saturation": 31.58,
+        "net_openings": 21.05,
+        "attention_trend": 94.74
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 18.42
+    },
+    {
+      "area": "13th arrondissement",
+      "evidence": {
+        "total_cells": 72,
+        "venue_count": 1298,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 3
+      },
+      "area_rule": {
+        "stage": "Emerging",
+        "rule_id": "Q-EMG",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Emerging",
+      "borderline": false,
+      "total_cells": 72,
+      "venue_count": 1298,
+      "stage_counts": {
+        "Peak": 1,
+        "Saturated": 2,
+        "Unclassified": 69
+      },
+      "viable_cells": 72,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Emerging",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.68,
+        "venue_count": 1298,
+        "buzz_percentile": 41.6996,
+        "saturation_percentile": 61.3389,
+        "net_openings_24m_per_venue": 0.0208,
+        "attention_trend_pct_per_month": 1.0802
+      },
+      "classified_cells": 3,
+      "classified_share": 0.0417,
+      "rank_percentiles": {
+        "buzz": 0,
+        "saturation": 15.79,
+        "net_openings": 10.53,
+        "attention_trend": 100
+      },
+      "cell_dominant_stage": "Saturated",
+      "distance_to_nearest_cut": 34.21
+    },
+    {
+      "area": "14th arrondissement",
+      "evidence": {
+        "total_cells": 54,
+        "venue_count": 1136,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 6
+      },
+      "area_rule": {
+        "stage": "Fading",
+        "rule_id": "Q-FADE",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Fading",
+      "borderline": false,
+      "total_cells": 54,
+      "venue_count": 1136,
+      "stage_counts": {
+        "Peak": 2,
+        "Fading": 1,
+        "Saturated": 3,
+        "Unclassified": 48
+      },
+      "viable_cells": 54,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Fading",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.723404255319149,
+        "venue_count": 1136,
+        "buzz_percentile": 58.0573,
+        "saturation_percentile": 65.0235,
+        "net_openings_24m_per_venue": 0.007,
+        "attention_trend_pct_per_month": 0.0612
+      },
+      "classified_cells": 6,
+      "classified_share": 0.1111,
+      "rank_percentiles": {
+        "buzz": 21.05,
+        "saturation": 36.84,
+        "net_openings": 5.26,
+        "attention_trend": 36.84
+      },
+      "cell_dominant_stage": "Saturated",
+      "distance_to_nearest_cut": 13.16
+    },
+    {
+      "area": "15th arrondissement",
+      "evidence": {
+        "total_cells": 82,
+        "venue_count": 1852,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 1
+      },
+      "area_rule": {
+        "stage": "Emerging",
+        "rule_id": "Q-EMG",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Emerging",
+      "borderline": false,
+      "total_cells": 82,
+      "venue_count": 1852,
+      "stage_counts": {
+        "Peak": 1,
+        "Unclassified": 81
+      },
+      "viable_cells": 82,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Emerging",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.6394557823129252,
+        "venue_count": 1852,
+        "buzz_percentile": 50.2035,
+        "saturation_percentile": 61.5323,
+        "net_openings_24m_per_venue": 0.0632,
+        "attention_trend_pct_per_month": 0.5029
+      },
+      "classified_cells": 1,
+      "classified_share": 0.0122,
+      "rank_percentiles": {
+        "buzz": 10.53,
+        "saturation": 21.05,
+        "net_openings": 84.21,
+        "attention_trend": 78.95
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 28.95
+    },
+    {
+      "area": "16th arrondissement",
+      "evidence": {
+        "total_cells": 77,
+        "venue_count": 1285,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 5
+      },
+      "area_rule": {
+        "stage": "Emerging",
+        "rule_id": "Q-EMG",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Emerging",
+      "borderline": false,
+      "total_cells": 77,
+      "venue_count": 1285,
+      "stage_counts": {
+        "Peak": 4,
+        "Saturated": 1,
+        "Unclassified": 72
+      },
+      "viable_cells": 77,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Emerging",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7099236641221374,
+        "venue_count": 1285,
+        "buzz_percentile": 67.9253,
+        "saturation_percentile": 44.1531,
+        "net_openings_24m_per_venue": 0.0607,
+        "attention_trend_pct_per_month": 0.2817
+      },
+      "classified_cells": 5,
+      "classified_share": 0.0649,
+      "rank_percentiles": {
+        "buzz": 36.84,
+        "saturation": 0,
+        "net_openings": 78.95,
+        "attention_trend": 73.68
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 23.68
+    },
+    {
+      "area": "17th arrondissement",
+      "evidence": {
+        "total_cells": 58,
+        "venue_count": 1891,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 4
+      },
+      "area_rule": {
+        "stage": "Emerging",
+        "rule_id": "Q-EMG",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Emerging",
+      "borderline": true,
+      "total_cells": 58,
+      "venue_count": 1891,
+      "stage_counts": {
+        "Peak": 3,
+        "Saturated": 1,
+        "Unclassified": 54
+      },
+      "viable_cells": 58,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Emerging",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.6861702127659575,
+        "venue_count": 1891,
+        "buzz_percentile": 62.9773,
+        "saturation_percentile": 71.2909,
+        "net_openings_24m_per_venue": 0.0227,
+        "attention_trend_pct_per_month": 0.5715
+      },
+      "classified_cells": 4,
+      "classified_share": 0.069,
+      "rank_percentiles": {
+        "buzz": 31.58,
+        "saturation": 42.11,
+        "net_openings": 15.79,
+        "attention_trend": 89.47
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 7.89
+    },
+    {
+      "area": "18th arrondissement",
+      "evidence": {
+        "total_cells": 58,
+        "venue_count": 2329,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 6
+      },
+      "area_rule": {
+        "stage": "Emerging",
+        "rule_id": "Q-EMG",
+        "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Emerging",
+      "borderline": true,
+      "total_cells": 58,
+      "venue_count": 2329,
+      "stage_counts": {
+        "Peak": 4,
+        "Saturated": 2,
+        "Unclassified": 52
+      },
+      "viable_cells": 58,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Emerging",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.6907216494845361,
+        "venue_count": 2329,
+        "buzz_percentile": 68.6858,
+        "saturation_percentile": 72.2606,
+        "net_openings_24m_per_venue": 0.0421,
+        "attention_trend_pct_per_month": 0.2706
+      },
+      "classified_cells": 6,
+      "classified_share": 0.1034,
+      "rank_percentiles": {
+        "buzz": 42.11,
+        "saturation": 47.37,
+        "net_openings": 47.37,
+        "attention_trend": 63.16
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 2.63
+    },
+    {
+      "area": "19th arrondissement",
+      "evidence": {
+        "total_cells": 67,
+        "venue_count": 1400,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 2
+      },
+      "area_rule": {
+        "stage": "Fading",
+        "rule_id": "Q-FADE",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Fading",
+      "borderline": false,
+      "total_cells": 67,
+      "venue_count": 1400,
+      "stage_counts": {
+        "Peak": 1,
+        "Fading": 1,
+        "Unclassified": 65
+      },
+      "viable_cells": 67,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Fading",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.7142857142857143,
+        "venue_count": 1400,
+        "buzz_percentile": 49.7684,
+        "saturation_percentile": 57.7956,
+        "net_openings_24m_per_venue": 0.0343,
+        "attention_trend_pct_per_month": -0.1011
+      },
+      "classified_cells": 2,
+      "classified_share": 0.0299,
+      "rank_percentiles": {
+        "buzz": 5.26,
+        "saturation": 5.26,
+        "net_openings": 31.58,
+        "attention_trend": 0
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 44.74
+    },
+    {
+      "area": "20th arrondissement",
+      "evidence": {
+        "total_cells": 62,
+        "venue_count": 1481,
+        "low_evidence": false,
+        "evidence_label": null,
+        "not_enough_data": false,
+        "classified_cells": 4
+      },
+      "area_rule": {
+        "stage": "Fading",
+        "rule_id": "Q-FADE",
+        "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+      },
+      "area_stage": "Fading",
+      "borderline": true,
+      "total_cells": 62,
+      "venue_count": 1481,
+      "stage_counts": {
+        "Peak": 3,
+        "Saturated": 1,
+        "Unclassified": 58
+      },
+      "viable_cells": 62,
+      "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+      "dominant_stage": "Fading",
+      "aggregate_scope": "arrondissement_area_inputs_v4",
+      "aggregate_inputs": {
+        "survival_3y": 0.6330275229357798,
+        "venue_count": 1481,
+        "buzz_percentile": 61.6103,
+        "saturation_percentile": 60.2396,
+        "net_openings_24m_per_venue": 0.0014,
+        "attention_trend_pct_per_month": 0.0941
+      },
+      "classified_cells": 4,
+      "classified_share": 0.0645,
+      "rank_percentiles": {
+        "buzz": 26.32,
+        "saturation": 10.53,
+        "net_openings": 0,
+        "attention_trend": 47.37
+      },
+      "cell_dominant_stage": "Peak",
+      "distance_to_nearest_cut": 2.63
+    }
+  ],
+  "attention_window": {
+    "end": "2026-05-31",
+    "start": "2025-06-01",
+    "months": [
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ]
+  },
+  "classified_share": 0.0755,
+  "emerging_nearest": null,
+  "format_board_meta": {
+    "all": {
+      "placed_areas": 20,
+      "board_eligible": true,
+      "profiled_areas": 20,
+      "borderline_areas": 8
+    },
+    "fast_food": {
+      "placed_areas": 20,
+      "board_eligible": true,
+      "profiled_areas": 20,
+      "borderline_areas": 8
+    },
+    "bars_cafes": {
+      "placed_areas": 20,
+      "board_eligible": true,
+      "profiled_areas": 20,
+      "borderline_areas": 8
+    },
+    "traditional_restaurant": {
+      "placed_areas": 20,
+      "board_eligible": true,
+      "profiled_areas": 20,
+      "borderline_areas": 8
+    }
+  },
+  "stage_distribution": {
+    "Peak": 37,
+    "Fading": 3,
+    "Saturated": 31,
+    "Unclassified": 869
+  },
+  "measured_validation": {
+    "by_format": {
+      "all": {
+        "verdict": "Some outcome tests reach p<0.05 at n=20, treat as exploratory only; median splits guarantee ~half the city on each axis and this is not a forecast.",
+        "n_placed": 20,
+        "quadrants": {
+          "Peak": {
+            "n": 4,
+            "mean_churn": 0.6154,
+            "mean_survival_3y": 0.7514,
+            "mean_net_openings_24m_per_venue": 0.0619
+          },
+          "Fading": {
+            "n": 4,
+            "mean_churn": 0.6561,
+            "mean_survival_3y": 0.7,
+            "mean_net_openings_24m_per_venue": 0.0209
+          },
+          "Emerging": {
+            "n": 6,
+            "mean_churn": 0.6816,
+            "mean_survival_3y": 0.6887,
+            "mean_net_openings_24m_per_venue": 0.0403
+          },
+          "Saturated": {
+            "n": 6,
+            "mean_churn": 0.5611,
+            "mean_survival_3y": 0.7095,
+            "mean_net_openings_24m_per_venue": 0.0579
+          }
+        },
+        "format_group": "all",
+        "mann_whitney": {
+          "fullness_split_survival": {
+            "u": 27,
+            "p_value": 0.082099
+          },
+          "momentum_split_survival": {
+            "u": 48,
+            "p_value": 0.879829
+          },
+          "fullness_split_net_openings": {
+            "u": 19,
+            "p_value": 0.01911
+          },
+          "momentum_split_net_openings": {
+            "u": 48.5,
+            "p_value": 0.909722
+          }
+        },
+        "kruskal_wallis": {
+          "power_note": "n=20 arrondissements, rank tests have low power; treat as descriptive.",
+          "survival_3y": {
+            "h": 5.9071,
+            "n": 20,
+            "p_value": 0.114455
+          },
+          "net_openings_24m_per_venue": {
+            "h": 6.9292,
+            "n": 20,
+            "p_value": 0.072867
+          }
+        }
+      },
+      "fast_food": {
+        "verdict": "Some outcome tests reach p<0.05 at n=20, treat as exploratory only; median splits guarantee ~half the city on each axis and this is not a forecast.",
+        "n_placed": 20,
+        "quadrants": {
+          "Peak": {
+            "n": 4,
+            "mean_churn": 0.4646,
+            "mean_survival_3y": 0.7514,
+            "mean_net_openings_24m_per_venue": 0.0957
+          },
+          "Fading": {
+            "n": 4,
+            "mean_churn": 0.4353,
+            "mean_survival_3y": 0.7,
+            "mean_net_openings_24m_per_venue": 0.0315
+          },
+          "Emerging": {
+            "n": 6,
+            "mean_churn": 0.4228,
+            "mean_survival_3y": 0.6887,
+            "mean_net_openings_24m_per_venue": 0.0506
+          },
+          "Saturated": {
+            "n": 6,
+            "mean_churn": 0.4148,
+            "mean_survival_3y": 0.7095,
+            "mean_net_openings_24m_per_venue": 0.0966
+          }
+        },
+        "format_group": "fast_food",
+        "mann_whitney": {
+          "fullness_split_survival": {
+            "u": 27,
+            "p_value": 0.082099
+          },
+          "momentum_split_survival": {
+            "u": 48,
+            "p_value": 0.879829
+          },
+          "fullness_split_net_openings": {
+            "u": 11,
+            "p_value": 0.003197
+          },
+          "momentum_split_net_openings": {
+            "u": 42,
+            "p_value": 0.54535
+          }
+        },
+        "kruskal_wallis": {
+          "power_note": "n=20 arrondissements, rank tests have low power; treat as descriptive.",
+          "survival_3y": {
+            "h": 5.9071,
+            "n": 20,
+            "p_value": 0.114455
+          },
+          "net_openings_24m_per_venue": {
+            "h": 9.1738,
+            "n": 20,
+            "p_value": 0.026742
+          }
+        }
+      },
+      "bars_cafes": {
+        "verdict": "Quadrants are descriptive placement by construction (median splits on ranks); outcomes do not show consistent separation across stages at n=20 (low power).",
+        "n_placed": 20,
+        "quadrants": {
+          "Peak": {
+            "n": 4,
+            "mean_churn": 0.4924,
+            "mean_survival_3y": 0.7514,
+            "mean_net_openings_24m_per_venue": 0.1918
+          },
+          "Fading": {
+            "n": 4,
+            "mean_churn": 0.4089,
+            "mean_survival_3y": 0.7,
+            "mean_net_openings_24m_per_venue": 0.1334
+          },
+          "Emerging": {
+            "n": 6,
+            "mean_churn": 0.4694,
+            "mean_survival_3y": 0.6887,
+            "mean_net_openings_24m_per_venue": 0.173
+          },
+          "Saturated": {
+            "n": 6,
+            "mean_churn": 0.4115,
+            "mean_survival_3y": 0.7095,
+            "mean_net_openings_24m_per_venue": 0.1882
+          }
+        },
+        "format_group": "bars_cafes",
+        "mann_whitney": {
+          "fullness_split_survival": {
+            "u": 27,
+            "p_value": 0.082099
+          },
+          "momentum_split_survival": {
+            "u": 48,
+            "p_value": 0.879829
+          },
+          "fullness_split_net_openings": {
+            "u": 32,
+            "p_value": 0.173617
+          },
+          "momentum_split_net_openings": {
+            "u": 44,
+            "p_value": 0.650147
+          }
+        },
+        "kruskal_wallis": {
+          "power_note": "n=20 arrondissements, rank tests have low power; treat as descriptive.",
+          "survival_3y": {
+            "h": 5.9071,
+            "n": 20,
+            "p_value": 0.114455
+          },
+          "net_openings_24m_per_venue": {
+            "h": 4.781,
+            "n": 20,
+            "p_value": 0.186827
+          }
+        }
+      },
+      "traditional_restaurant": {
+        "verdict": "Quadrants are descriptive placement by construction (median splits on ranks); outcomes do not show consistent separation across stages at n=20 (low power).",
+        "n_placed": 20,
+        "quadrants": {
+          "Peak": {
+            "n": 4,
+            "mean_churn": 0.2721,
+            "mean_survival_3y": 0.7514,
+            "mean_net_openings_24m_per_venue": 0.0097
+          },
+          "Fading": {
+            "n": 4,
+            "mean_churn": 0.3102,
+            "mean_survival_3y": 0.7,
+            "mean_net_openings_24m_per_venue": -0.0105
+          },
+          "Emerging": {
+            "n": 6,
+            "mean_churn": 0.312,
+            "mean_survival_3y": 0.6887,
+            "mean_net_openings_24m_per_venue": 0.0089
+          },
+          "Saturated": {
+            "n": 6,
+            "mean_churn": 0.2498,
+            "mean_survival_3y": 0.7095,
+            "mean_net_openings_24m_per_venue": 0.0037
+          }
+        },
+        "format_group": "traditional_restaurant",
+        "mann_whitney": {
+          "fullness_split_survival": {
+            "u": 27,
+            "p_value": 0.082099
+          },
+          "momentum_split_survival": {
+            "u": 48,
+            "p_value": 0.879829
+          },
+          "fullness_split_net_openings": {
+            "u": 47,
+            "p_value": 0.820596
+          },
+          "momentum_split_net_openings": {
+            "u": 34,
+            "p_value": 0.226476
+          }
+        },
+        "kruskal_wallis": {
+          "power_note": "n=20 arrondissements, rank tests have low power; treat as descriptive.",
+          "survival_3y": {
+            "h": 5.9071,
+            "n": 20,
+            "p_value": 0.114455
+          },
+          "net_openings_24m_per_venue": {
+            "h": 1.7452,
+            "n": 20,
+            "p_value": 0.631131
+          }
+        }
+      }
+    },
+    "leave_one_out": {
+      "comparisons": 380,
+      "areas_placed": 20,
+      "share_changed": 0.0526,
+      "stage_changes": 20,
+      "borderline_stage_changes": 20
+    }
+  },
+  "area_stage_distribution": {
+    "Peak": 4,
+    "Fading": 4,
+    "Emerging": 6,
+    "Saturated": 6
+  },
+  "arrondissements_profiled": 20,
+  "arrondissements_by_format": {
+    "all": [
+      {
+        "area": "1st arrondissement",
+        "evidence": {
+          "total_cells": 14,
+          "venue_count": 1314,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 14,
+        "venue_count": 1314,
+        "stage_counts": {
+          "Peak": 1,
+          "Unclassified": 13
+        },
+        "viable_cells": 14,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7572815533980582,
+          "venue_count": 1314,
+          "buzz_percentile": 95.574,
+          "saturation_percentile": 90.704,
+          "net_openings_24m_per_venue": 0.0556,
+          "attention_trend_pct_per_month": 0.1183
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0714,
+        "rank_percentiles": {
+          "buzz": 89.47,
+          "saturation": 89.47,
+          "net_openings": 68.42,
+          "attention_trend": 52.63
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "2nd arrondissement",
+        "evidence": {
+          "total_cells": 10,
+          "venue_count": 1299,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 2
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 10,
+        "venue_count": 1299,
+        "stage_counts": {
+          "Saturated": 2,
+          "Unclassified": 8
+        },
+        "viable_cells": 10,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7094017094017094,
+          "venue_count": 1299,
+          "buzz_percentile": 95.0167,
+          "saturation_percentile": 96.9167,
+          "net_openings_24m_per_venue": 0.0701,
+          "attention_trend_pct_per_month": 0.0293
+        },
+        "classified_cells": 2,
+        "classified_share": 0.2,
+        "rank_percentiles": {
+          "buzz": 84.21,
+          "saturation": 100,
+          "net_openings": 89.47,
+          "attention_trend": 21.05
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "3rd arrondissement",
+        "evidence": {
+          "total_cells": 13,
+          "venue_count": 959,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 13,
+        "venue_count": 959,
+        "stage_counts": {
+          "Unclassified": 13
+        },
+        "viable_cells": 13,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.75,
+          "venue_count": 959,
+          "buzz_percentile": 97.5815,
+          "saturation_percentile": 90.4397,
+          "net_openings_24m_per_venue": 0.0594,
+          "attention_trend_pct_per_month": 0.0034
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 100,
+          "saturation": 84.21,
+          "net_openings": 73.68,
+          "attention_trend": 5.26
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 34.21
+      },
+      {
+        "area": "4th arrondissement",
+        "evidence": {
+          "total_cells": 11,
+          "venue_count": 939,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": true,
+        "total_cells": 11,
+        "venue_count": 939,
+        "stage_counts": {
+          "Saturated": 3,
+          "Unclassified": 8
+        },
+        "viable_cells": 11,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7432432432432432,
+          "venue_count": 939,
+          "buzz_percentile": 95.6901,
+          "saturation_percentile": 86.9569,
+          "net_openings_24m_per_venue": 0.0724,
+          "attention_trend_pct_per_month": 0.0779
+        },
+        "classified_cells": 3,
+        "classified_share": 0.2727,
+        "rank_percentiles": {
+          "buzz": 94.74,
+          "saturation": 73.68,
+          "net_openings": 94.74,
+          "attention_trend": 42.11
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "5th arrondissement",
+        "evidence": {
+          "total_cells": 23,
+          "venue_count": 1358,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 6
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 23,
+        "venue_count": 1358,
+        "stage_counts": {
+          "Peak": 3,
+          "Saturated": 3,
+          "Unclassified": 17
+        },
+        "viable_cells": 23,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7203389830508474,
+          "venue_count": 1358,
+          "buzz_percentile": 89.2944,
+          "saturation_percentile": 87.5556,
+          "net_openings_24m_per_venue": 0.0376,
+          "attention_trend_pct_per_month": 0.0035
+        },
+        "classified_cells": 6,
+        "classified_share": 0.2609,
+        "rank_percentiles": {
+          "buzz": 73.68,
+          "saturation": 78.95,
+          "net_openings": 36.84,
+          "attention_trend": 10.53
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "6th arrondissement",
+        "evidence": {
+          "total_cells": 16,
+          "venue_count": 1030,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": true,
+        "total_cells": 16,
+        "venue_count": 1030,
+        "stage_counts": {
+          "Peak": 1,
+          "Fading": 1,
+          "Saturated": 1,
+          "Unclassified": 13
+        },
+        "viable_cells": 16,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6447368421052632,
+          "venue_count": 1030,
+          "buzz_percentile": 90.0309,
+          "saturation_percentile": 84.9805,
+          "net_openings_24m_per_venue": 0.0553,
+          "attention_trend_pct_per_month": 0.0312
+        },
+        "classified_cells": 3,
+        "classified_share": 0.1875,
+        "rank_percentiles": {
+          "buzz": 78.95,
+          "saturation": 57.89,
+          "net_openings": 63.16,
+          "attention_trend": 26.32
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "7th arrondissement",
+        "evidence": {
+          "total_cells": 38,
+          "venue_count": 806,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 38,
+        "venue_count": 806,
+        "stage_counts": {
+          "Peak": 2,
+          "Saturated": 1,
+          "Unclassified": 35
+        },
+        "viable_cells": 38,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7291666666666666,
+          "venue_count": 806,
+          "buzz_percentile": 78.0333,
+          "saturation_percentile": 62.2553,
+          "net_openings_24m_per_venue": 0.0409,
+          "attention_trend_pct_per_month": 0.0132
+        },
+        "classified_cells": 3,
+        "classified_share": 0.0789,
+        "rank_percentiles": {
+          "buzz": 47.37,
+          "saturation": 26.32,
+          "net_openings": 42.11,
+          "attention_trend": 15.79
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "8th arrondissement",
+        "evidence": {
+          "total_cells": 40,
+          "venue_count": 2090,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 40,
+        "venue_count": 2090,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 3,
+          "Unclassified": 36
+        },
+        "viable_cells": 40,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6967741935483871,
+          "venue_count": 2090,
+          "buzz_percentile": 79.0703,
+          "saturation_percentile": 79.5506,
+          "net_openings_24m_per_venue": 0.1057,
+          "attention_trend_pct_per_month": 0.5546
+        },
+        "classified_cells": 4,
+        "classified_share": 0.1,
+        "rank_percentiles": {
+          "buzz": 52.63,
+          "saturation": 52.63,
+          "net_openings": 100,
+          "attention_trend": 84.21
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "9th arrondissement",
+        "evidence": {
+          "total_cells": 23,
+          "venue_count": 2289,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 5
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": false,
+        "total_cells": 23,
+        "venue_count": 2289,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 4,
+          "Unclassified": 18
+        },
+        "viable_cells": 23,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.776536312849162,
+          "venue_count": 2289,
+          "buzz_percentile": 87.0582,
+          "saturation_percentile": 93.9049,
+          "net_openings_24m_per_venue": 0.0341,
+          "attention_trend_pct_per_month": 0.2762
+        },
+        "classified_cells": 5,
+        "classified_share": 0.2174,
+        "rank_percentiles": {
+          "buzz": 68.42,
+          "saturation": 94.74,
+          "net_openings": 26.32,
+          "attention_trend": 68.42
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "10th arrondissement",
+        "evidence": {
+          "total_cells": 30,
+          "venue_count": 2142,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 2
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 30,
+        "venue_count": 2142,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 1,
+          "Unclassified": 28
+        },
+        "viable_cells": 30,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7751479289940828,
+          "venue_count": 2142,
+          "buzz_percentile": 82.4223,
+          "saturation_percentile": 86.3098,
+          "net_openings_24m_per_venue": 0.0523,
+          "attention_trend_pct_per_month": 0.1797
+        },
+        "classified_cells": 2,
+        "classified_share": 0.0667,
+        "rank_percentiles": {
+          "buzz": 57.89,
+          "saturation": 63.16,
+          "net_openings": 55.26,
+          "attention_trend": 57.89
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "11th arrondissement",
+        "evidence": {
+          "total_cells": 36,
+          "venue_count": 2429,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 7
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 36,
+        "venue_count": 2429,
+        "stage_counts": {
+          "Peak": 6,
+          "Saturated": 1,
+          "Unclassified": 29
+        },
+        "viable_cells": 36,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6894977168949772,
+          "venue_count": 2429,
+          "buzz_percentile": 83.3869,
+          "saturation_percentile": 86.9387,
+          "net_openings_24m_per_venue": 0.0523,
+          "attention_trend_pct_per_month": 0.0342
+        },
+        "classified_cells": 7,
+        "classified_share": 0.1944,
+        "rank_percentiles": {
+          "buzz": 63.16,
+          "saturation": 68.42,
+          "net_openings": 55.26,
+          "attention_trend": 31.58
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "12th arrondissement",
+        "evidence": {
+          "total_cells": 61,
+          "venue_count": 1553,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 61,
+        "venue_count": 1553,
+        "stage_counts": {
+          "Peak": 2,
+          "Saturated": 2,
+          "Unclassified": 57
+        },
+        "viable_cells": 61,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7258064516129032,
+          "venue_count": 1553,
+          "buzz_percentile": 56.6612,
+          "saturation_percentile": 63.3266,
+          "net_openings_24m_per_venue": 0.0322,
+          "attention_trend_pct_per_month": 0.6087
+        },
+        "classified_cells": 4,
+        "classified_share": 0.0656,
+        "rank_percentiles": {
+          "buzz": 15.79,
+          "saturation": 31.58,
+          "net_openings": 21.05,
+          "attention_trend": 94.74
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "13th arrondissement",
+        "evidence": {
+          "total_cells": 72,
+          "venue_count": 1298,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 72,
+        "venue_count": 1298,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 2,
+          "Unclassified": 69
+        },
+        "viable_cells": 72,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.68,
+          "venue_count": 1298,
+          "buzz_percentile": 41.6996,
+          "saturation_percentile": 61.3389,
+          "net_openings_24m_per_venue": 0.0208,
+          "attention_trend_pct_per_month": 1.0802
+        },
+        "classified_cells": 3,
+        "classified_share": 0.0417,
+        "rank_percentiles": {
+          "buzz": 0,
+          "saturation": 15.79,
+          "net_openings": 10.53,
+          "attention_trend": 100
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 34.21
+      },
+      {
+        "area": "14th arrondissement",
+        "evidence": {
+          "total_cells": 54,
+          "venue_count": 1136,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 6
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 54,
+        "venue_count": 1136,
+        "stage_counts": {
+          "Peak": 2,
+          "Fading": 1,
+          "Saturated": 3,
+          "Unclassified": 48
+        },
+        "viable_cells": 54,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.723404255319149,
+          "venue_count": 1136,
+          "buzz_percentile": 58.0573,
+          "saturation_percentile": 65.0235,
+          "net_openings_24m_per_venue": 0.007,
+          "attention_trend_pct_per_month": 0.0612
+        },
+        "classified_cells": 6,
+        "classified_share": 0.1111,
+        "rank_percentiles": {
+          "buzz": 21.05,
+          "saturation": 36.84,
+          "net_openings": 5.26,
+          "attention_trend": 36.84
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 13.16
+      },
+      {
+        "area": "15th arrondissement",
+        "evidence": {
+          "total_cells": 82,
+          "venue_count": 1852,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 82,
+        "venue_count": 1852,
+        "stage_counts": {
+          "Peak": 1,
+          "Unclassified": 81
+        },
+        "viable_cells": 82,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6394557823129252,
+          "venue_count": 1852,
+          "buzz_percentile": 50.2035,
+          "saturation_percentile": 61.5323,
+          "net_openings_24m_per_venue": 0.0632,
+          "attention_trend_pct_per_month": 0.5029
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0122,
+        "rank_percentiles": {
+          "buzz": 10.53,
+          "saturation": 21.05,
+          "net_openings": 84.21,
+          "attention_trend": 78.95
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "16th arrondissement",
+        "evidence": {
+          "total_cells": 77,
+          "venue_count": 1285,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 5
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 77,
+        "venue_count": 1285,
+        "stage_counts": {
+          "Peak": 4,
+          "Saturated": 1,
+          "Unclassified": 72
+        },
+        "viable_cells": 77,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7099236641221374,
+          "venue_count": 1285,
+          "buzz_percentile": 67.9253,
+          "saturation_percentile": 44.1531,
+          "net_openings_24m_per_venue": 0.0607,
+          "attention_trend_pct_per_month": 0.2817
+        },
+        "classified_cells": 5,
+        "classified_share": 0.0649,
+        "rank_percentiles": {
+          "buzz": 36.84,
+          "saturation": 0,
+          "net_openings": 78.95,
+          "attention_trend": 73.68
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "17th arrondissement",
+        "evidence": {
+          "total_cells": 58,
+          "venue_count": 1891,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": true,
+        "total_cells": 58,
+        "venue_count": 1891,
+        "stage_counts": {
+          "Peak": 3,
+          "Saturated": 1,
+          "Unclassified": 54
+        },
+        "viable_cells": 58,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6861702127659575,
+          "venue_count": 1891,
+          "buzz_percentile": 62.9773,
+          "saturation_percentile": 71.2909,
+          "net_openings_24m_per_venue": 0.0227,
+          "attention_trend_pct_per_month": 0.5715
+        },
+        "classified_cells": 4,
+        "classified_share": 0.069,
+        "rank_percentiles": {
+          "buzz": 31.58,
+          "saturation": 42.11,
+          "net_openings": 15.79,
+          "attention_trend": 89.47
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "18th arrondissement",
+        "evidence": {
+          "total_cells": 58,
+          "venue_count": 2329,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 6
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": true,
+        "total_cells": 58,
+        "venue_count": 2329,
+        "stage_counts": {
+          "Peak": 4,
+          "Saturated": 2,
+          "Unclassified": 52
+        },
+        "viable_cells": 58,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6907216494845361,
+          "venue_count": 2329,
+          "buzz_percentile": 68.6858,
+          "saturation_percentile": 72.2606,
+          "net_openings_24m_per_venue": 0.0421,
+          "attention_trend_pct_per_month": 0.2706
+        },
+        "classified_cells": 6,
+        "classified_share": 0.1034,
+        "rank_percentiles": {
+          "buzz": 42.11,
+          "saturation": 47.37,
+          "net_openings": 47.37,
+          "attention_trend": 63.16
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "19th arrondissement",
+        "evidence": {
+          "total_cells": 67,
+          "venue_count": 1400,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 2
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 67,
+        "venue_count": 1400,
+        "stage_counts": {
+          "Peak": 1,
+          "Fading": 1,
+          "Unclassified": 65
+        },
+        "viable_cells": 67,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7142857142857143,
+          "venue_count": 1400,
+          "buzz_percentile": 49.7684,
+          "saturation_percentile": 57.7956,
+          "net_openings_24m_per_venue": 0.0343,
+          "attention_trend_pct_per_month": -0.1011
+        },
+        "classified_cells": 2,
+        "classified_share": 0.0299,
+        "rank_percentiles": {
+          "buzz": 5.26,
+          "saturation": 5.26,
+          "net_openings": 31.58,
+          "attention_trend": 0
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 44.74
+      },
+      {
+        "area": "20th arrondissement",
+        "evidence": {
+          "total_cells": 62,
+          "venue_count": 1481,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": true,
+        "total_cells": 62,
+        "venue_count": 1481,
+        "stage_counts": {
+          "Peak": 3,
+          "Saturated": 1,
+          "Unclassified": 58
+        },
+        "viable_cells": 62,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6330275229357798,
+          "venue_count": 1481,
+          "buzz_percentile": 61.6103,
+          "saturation_percentile": 60.2396,
+          "net_openings_24m_per_venue": 0.0014,
+          "attention_trend_pct_per_month": 0.0941
+        },
+        "classified_cells": 4,
+        "classified_share": 0.0645,
+        "rank_percentiles": {
+          "buzz": 26.32,
+          "saturation": 10.53,
+          "net_openings": 0,
+          "attention_trend": 47.37
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 2.63
+      }
+    ],
+    "fast_food": [
+      {
+        "area": "1st arrondissement",
+        "evidence": {
+          "total_cells": 14,
+          "venue_count": 446,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 14,
+        "venue_count": 446,
+        "stage_counts": {
+          "Unclassified": 14
+        },
+        "viable_cells": 14,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7572815533980582,
+          "venue_count": 446,
+          "buzz_percentile": 95.574,
+          "saturation_percentile": 90.326,
+          "net_openings_24m_per_venue": 0.0897,
+          "attention_trend_pct_per_month": 0.1183
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 89.47,
+          "saturation": 84.21,
+          "net_openings": 73.68,
+          "attention_trend": 52.63
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "2nd arrondissement",
+        "evidence": {
+          "total_cells": 10,
+          "venue_count": 516,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 10,
+        "venue_count": 516,
+        "stage_counts": {
+          "Saturated": 3,
+          "Unclassified": 7
+        },
+        "viable_cells": 10,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7094017094017094,
+          "venue_count": 516,
+          "buzz_percentile": 95.0167,
+          "saturation_percentile": 96.8726,
+          "net_openings_24m_per_venue": 0.1008,
+          "attention_trend_pct_per_month": 0.0293
+        },
+        "classified_cells": 3,
+        "classified_share": 0.3,
+        "rank_percentiles": {
+          "buzz": 84.21,
+          "saturation": 100,
+          "net_openings": 84.21,
+          "attention_trend": 21.05
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "3rd arrondissement",
+        "evidence": {
+          "total_cells": 13,
+          "venue_count": 360,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 13,
+        "venue_count": 360,
+        "stage_counts": {
+          "Unclassified": 13
+        },
+        "viable_cells": 13,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.75,
+          "venue_count": 360,
+          "buzz_percentile": 97.5815,
+          "saturation_percentile": 91.1453,
+          "net_openings_24m_per_venue": 0.0944,
+          "attention_trend_pct_per_month": 0.0034
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 100,
+          "saturation": 89.47,
+          "net_openings": 78.95,
+          "attention_trend": 5.26
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 39.47
+      },
+      {
+        "area": "4th arrondissement",
+        "evidence": {
+          "total_cells": 11,
+          "venue_count": 293,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": true,
+        "total_cells": 11,
+        "venue_count": 293,
+        "stage_counts": {
+          "Unclassified": 11
+        },
+        "viable_cells": 11,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7432432432432432,
+          "venue_count": 293,
+          "buzz_percentile": 95.6901,
+          "saturation_percentile": 89.0587,
+          "net_openings_24m_per_venue": 0.1365,
+          "attention_trend_pct_per_month": 0.0779
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 94.74,
+          "saturation": 78.95,
+          "net_openings": 94.74,
+          "attention_trend": 42.11
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "5th arrondissement",
+        "evidence": {
+          "total_cells": 23,
+          "venue_count": 419,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 2
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 23,
+        "venue_count": 419,
+        "stage_counts": {
+          "Saturated": 2,
+          "Unclassified": 21
+        },
+        "viable_cells": 23,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7203389830508474,
+          "venue_count": 419,
+          "buzz_percentile": 89.2944,
+          "saturation_percentile": 87.2905,
+          "net_openings_24m_per_venue": 0.0525,
+          "attention_trend_pct_per_month": 0.0035
+        },
+        "classified_cells": 2,
+        "classified_share": 0.087,
+        "rank_percentiles": {
+          "buzz": 73.68,
+          "saturation": 73.68,
+          "net_openings": 42.11,
+          "attention_trend": 10.53
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "6th arrondissement",
+        "evidence": {
+          "total_cells": 16,
+          "venue_count": 303,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": true,
+        "total_cells": 16,
+        "venue_count": 303,
+        "stage_counts": {
+          "Unclassified": 16
+        },
+        "viable_cells": 16,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6447368421052632,
+          "venue_count": 303,
+          "buzz_percentile": 90.0309,
+          "saturation_percentile": 83.8809,
+          "net_openings_24m_per_venue": 0.1155,
+          "attention_trend_pct_per_month": 0.0312
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 78.95,
+          "saturation": 57.89,
+          "net_openings": 89.47,
+          "attention_trend": 26.32
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "7th arrondissement",
+        "evidence": {
+          "total_cells": 38,
+          "venue_count": 229,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 38,
+        "venue_count": 229,
+        "stage_counts": {
+          "Peak": 1,
+          "Unclassified": 37
+        },
+        "viable_cells": 38,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7291666666666666,
+          "venue_count": 229,
+          "buzz_percentile": 78.0333,
+          "saturation_percentile": 62.7419,
+          "net_openings_24m_per_venue": 0.0611,
+          "attention_trend_pct_per_month": 0.0132
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0263,
+        "rank_percentiles": {
+          "buzz": 47.37,
+          "saturation": 26.32,
+          "net_openings": 47.37,
+          "attention_trend": 15.79
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "8th arrondissement",
+        "evidence": {
+          "total_cells": 40,
+          "venue_count": 927,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 40,
+        "venue_count": 927,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 2,
+          "Unclassified": 37
+        },
+        "viable_cells": 40,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6967741935483871,
+          "venue_count": 927,
+          "buzz_percentile": 79.0703,
+          "saturation_percentile": 82.2257,
+          "net_openings_24m_per_venue": 0.1748,
+          "attention_trend_pct_per_month": 0.5546
+        },
+        "classified_cells": 3,
+        "classified_share": 0.075,
+        "rank_percentiles": {
+          "buzz": 52.63,
+          "saturation": 52.63,
+          "net_openings": 100,
+          "attention_trend": 84.21
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "9th arrondissement",
+        "evidence": {
+          "total_cells": 23,
+          "venue_count": 916,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": false,
+        "total_cells": 23,
+        "venue_count": 916,
+        "stage_counts": {
+          "Saturated": 3,
+          "Unclassified": 20
+        },
+        "viable_cells": 23,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.776536312849162,
+          "venue_count": 916,
+          "buzz_percentile": 87.0582,
+          "saturation_percentile": 93.8508,
+          "net_openings_24m_per_venue": 0.0491,
+          "attention_trend_pct_per_month": 0.2762
+        },
+        "classified_cells": 3,
+        "classified_share": 0.1304,
+        "rank_percentiles": {
+          "buzz": 68.42,
+          "saturation": 94.74,
+          "net_openings": 31.58,
+          "attention_trend": 68.42
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "10th arrondissement",
+        "evidence": {
+          "total_cells": 30,
+          "venue_count": 852,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 5
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 30,
+        "venue_count": 852,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 4,
+          "Unclassified": 25
+        },
+        "viable_cells": 30,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7751479289940828,
+          "venue_count": 852,
+          "buzz_percentile": 82.4223,
+          "saturation_percentile": 85.7211,
+          "net_openings_24m_per_venue": 0.0692,
+          "attention_trend_pct_per_month": 0.1797
+        },
+        "classified_cells": 5,
+        "classified_share": 0.1667,
+        "rank_percentiles": {
+          "buzz": 57.89,
+          "saturation": 63.16,
+          "net_openings": 52.63,
+          "attention_trend": 57.89
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "11th arrondissement",
+        "evidence": {
+          "total_cells": 36,
+          "venue_count": 854,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 6
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 36,
+        "venue_count": 854,
+        "stage_counts": {
+          "Peak": 3,
+          "Saturated": 3,
+          "Unclassified": 30
+        },
+        "viable_cells": 36,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6894977168949772,
+          "venue_count": 854,
+          "buzz_percentile": 83.3869,
+          "saturation_percentile": 87.2523,
+          "net_openings_24m_per_venue": 0.0796,
+          "attention_trend_pct_per_month": 0.0342
+        },
+        "classified_cells": 6,
+        "classified_share": 0.1667,
+        "rank_percentiles": {
+          "buzz": 63.16,
+          "saturation": 68.42,
+          "net_openings": 57.89,
+          "attention_trend": 31.58
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "12th arrondissement",
+        "evidence": {
+          "total_cells": 61,
+          "venue_count": 610,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 61,
+        "venue_count": 610,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 2,
+          "Unclassified": 58
+        },
+        "viable_cells": 61,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7258064516129032,
+          "venue_count": 610,
+          "buzz_percentile": 56.6612,
+          "saturation_percentile": 65.6434,
+          "net_openings_24m_per_venue": 0.0328,
+          "attention_trend_pct_per_month": 0.6087
+        },
+        "classified_cells": 3,
+        "classified_share": 0.0492,
+        "rank_percentiles": {
+          "buzz": 15.79,
+          "saturation": 36.84,
+          "net_openings": 15.79,
+          "attention_trend": 94.74
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 13.16
+      },
+      {
+        "area": "13th arrondissement",
+        "evidence": {
+          "total_cells": 72,
+          "venue_count": 508,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 72,
+        "venue_count": 508,
+        "stage_counts": {
+          "Peak": 1,
+          "Unclassified": 71
+        },
+        "viable_cells": 72,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.68,
+          "venue_count": 508,
+          "buzz_percentile": 41.6996,
+          "saturation_percentile": 60.4083,
+          "net_openings_24m_per_venue": 0.0512,
+          "attention_trend_pct_per_month": 1.0802
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0139,
+        "rank_percentiles": {
+          "buzz": 0,
+          "saturation": 15.79,
+          "net_openings": 36.84,
+          "attention_trend": 100
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 34.21
+      },
+      {
+        "area": "14th arrondissement",
+        "evidence": {
+          "total_cells": 54,
+          "venue_count": 409,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 54,
+        "venue_count": 409,
+        "stage_counts": {
+          "Saturated": 1,
+          "Unclassified": 53
+        },
+        "viable_cells": 54,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.723404255319149,
+          "venue_count": 409,
+          "buzz_percentile": 58.0573,
+          "saturation_percentile": 63.7524,
+          "net_openings_24m_per_venue": 0.0416,
+          "attention_trend_pct_per_month": 0.0612
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0185,
+        "rank_percentiles": {
+          "buzz": 21.05,
+          "saturation": 31.58,
+          "net_openings": 26.32,
+          "attention_trend": 36.84
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 13.16
+      },
+      {
+        "area": "15th arrondissement",
+        "evidence": {
+          "total_cells": 82,
+          "venue_count": 698,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 82,
+        "venue_count": 698,
+        "stage_counts": {
+          "Saturated": 1,
+          "Unclassified": 81
+        },
+        "viable_cells": 82,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6394557823129252,
+          "venue_count": 698,
+          "buzz_percentile": 50.2035,
+          "saturation_percentile": 62.0984,
+          "net_openings_24m_per_venue": 0.0888,
+          "attention_trend_pct_per_month": 0.5029
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0122,
+        "rank_percentiles": {
+          "buzz": 10.53,
+          "saturation": 21.05,
+          "net_openings": 68.42,
+          "attention_trend": 78.95
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "16th arrondissement",
+        "evidence": {
+          "total_cells": 77,
+          "venue_count": 468,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 77,
+        "venue_count": 468,
+        "stage_counts": {
+          "Peak": 3,
+          "Unclassified": 74
+        },
+        "viable_cells": 77,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7099236641221374,
+          "venue_count": 468,
+          "buzz_percentile": 67.9253,
+          "saturation_percentile": 47.1435,
+          "net_openings_24m_per_venue": 0.0876,
+          "attention_trend_pct_per_month": 0.2817
+        },
+        "classified_cells": 3,
+        "classified_share": 0.039,
+        "rank_percentiles": {
+          "buzz": 36.84,
+          "saturation": 0,
+          "net_openings": 63.16,
+          "attention_trend": 73.68
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "17th arrondissement",
+        "evidence": {
+          "total_cells": 58,
+          "venue_count": 698,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 5
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": true,
+        "total_cells": 58,
+        "venue_count": 698,
+        "stage_counts": {
+          "Peak": 2,
+          "Saturated": 3,
+          "Unclassified": 53
+        },
+        "viable_cells": 58,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6861702127659575,
+          "venue_count": 698,
+          "buzz_percentile": 62.9773,
+          "saturation_percentile": 69.9517,
+          "net_openings_24m_per_venue": 0.0215,
+          "attention_trend_pct_per_month": 0.5715
+        },
+        "classified_cells": 5,
+        "classified_share": 0.0862,
+        "rank_percentiles": {
+          "buzz": 31.58,
+          "saturation": 47.37,
+          "net_openings": 5.26,
+          "attention_trend": 89.47
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "18th arrondissement",
+        "evidence": {
+          "total_cells": 58,
+          "venue_count": 822,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 7
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": true,
+        "total_cells": 58,
+        "venue_count": 822,
+        "stage_counts": {
+          "Peak": 2,
+          "Saturated": 5,
+          "Unclassified": 51
+        },
+        "viable_cells": 58,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6907216494845361,
+          "venue_count": 822,
+          "buzz_percentile": 68.6858,
+          "saturation_percentile": 69.5576,
+          "net_openings_24m_per_venue": 0.0219,
+          "attention_trend_pct_per_month": 0.2706
+        },
+        "classified_cells": 7,
+        "classified_share": 0.1207,
+        "rank_percentiles": {
+          "buzz": 42.11,
+          "saturation": 42.11,
+          "net_openings": 10.53,
+          "attention_trend": 63.16
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "19th arrondissement",
+        "evidence": {
+          "total_cells": 67,
+          "venue_count": 592,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 67,
+        "venue_count": 592,
+        "stage_counts": {
+          "Peak": 1,
+          "Fading": 2,
+          "Unclassified": 64
+        },
+        "viable_cells": 67,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7142857142857143,
+          "venue_count": 592,
+          "buzz_percentile": 49.7684,
+          "saturation_percentile": 55.8504,
+          "net_openings_24m_per_venue": 0.0355,
+          "attention_trend_pct_per_month": -0.1011
+        },
+        "classified_cells": 3,
+        "classified_share": 0.0448,
+        "rank_percentiles": {
+          "buzz": 5.26,
+          "saturation": 5.26,
+          "net_openings": 21.05,
+          "attention_trend": 0
+        },
+        "cell_dominant_stage": "Fading",
+        "distance_to_nearest_cut": 44.74
+      },
+      {
+        "area": "20th arrondissement",
+        "evidence": {
+          "total_cells": 62,
+          "venue_count": 570,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": true,
+        "total_cells": 62,
+        "venue_count": 570,
+        "stage_counts": {
+          "Peak": 3,
+          "Saturated": 1,
+          "Unclassified": 58
+        },
+        "viable_cells": 62,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6330275229357798,
+          "venue_count": 570,
+          "buzz_percentile": 61.6103,
+          "saturation_percentile": 59.7242,
+          "net_openings_24m_per_venue": -0.0123,
+          "attention_trend_pct_per_month": 0.0941
+        },
+        "classified_cells": 4,
+        "classified_share": 0.0645,
+        "rank_percentiles": {
+          "buzz": 26.32,
+          "saturation": 10.53,
+          "net_openings": 0,
+          "attention_trend": 47.37
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 2.63
+      }
+    ],
+    "bars_cafes": [
+      {
+        "area": "1st arrondissement",
+        "evidence": {
+          "total_cells": 14,
+          "venue_count": 131,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 14,
+        "venue_count": 131,
+        "stage_counts": {
+          "Unclassified": 14
+        },
+        "viable_cells": 14,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7572815533980582,
+          "venue_count": 131,
+          "buzz_percentile": 95.574,
+          "saturation_percentile": 91.9716,
+          "net_openings_24m_per_venue": 0.2672,
+          "attention_trend_pct_per_month": 0.1183
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 89.47,
+          "saturation": 89.47,
+          "net_openings": 94.74,
+          "attention_trend": 52.63
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "2nd arrondissement",
+        "evidence": {
+          "total_cells": 10,
+          "venue_count": 138,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 10,
+        "venue_count": 138,
+        "stage_counts": {
+          "Unclassified": 10
+        },
+        "viable_cells": 10,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7094017094017094,
+          "venue_count": 138,
+          "buzz_percentile": 95.0167,
+          "saturation_percentile": 96.3734,
+          "net_openings_24m_per_venue": 0.1812,
+          "attention_trend_pct_per_month": 0.0293
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 84.21,
+          "saturation": 100,
+          "net_openings": 73.68,
+          "attention_trend": 21.05
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "3rd arrondissement",
+        "evidence": {
+          "total_cells": 13,
+          "venue_count": 113,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 13,
+        "venue_count": 113,
+        "stage_counts": {
+          "Unclassified": 13
+        },
+        "viable_cells": 13,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.75,
+          "venue_count": 113,
+          "buzz_percentile": 97.5815,
+          "saturation_percentile": 89.4205,
+          "net_openings_24m_per_venue": 0.177,
+          "attention_trend_pct_per_month": 0.0034
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 100,
+          "saturation": 84.21,
+          "net_openings": 68.42,
+          "attention_trend": 5.26
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 34.21
+      },
+      {
+        "area": "4th arrondissement",
+        "evidence": {
+          "total_cells": 11,
+          "venue_count": 133,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": true,
+        "total_cells": 11,
+        "venue_count": 133,
+        "stage_counts": {
+          "Unclassified": 11
+        },
+        "viable_cells": 11,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7432432432432432,
+          "venue_count": 133,
+          "buzz_percentile": 95.6901,
+          "saturation_percentile": 85.2113,
+          "net_openings_24m_per_venue": 0.2331,
+          "attention_trend_pct_per_month": 0.0779
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 94.74,
+          "saturation": 63.16,
+          "net_openings": 84.21,
+          "attention_trend": 42.11
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "5th arrondissement",
+        "evidence": {
+          "total_cells": 23,
+          "venue_count": 153,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 23,
+        "venue_count": 153,
+        "stage_counts": {
+          "Unclassified": 23
+        },
+        "viable_cells": 23,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7203389830508474,
+          "venue_count": 153,
+          "buzz_percentile": 89.2944,
+          "saturation_percentile": 87.2283,
+          "net_openings_24m_per_venue": 0.2157,
+          "attention_trend_pct_per_month": 0.0035
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 73.68,
+          "saturation": 73.68,
+          "net_openings": 78.95,
+          "attention_trend": 10.53
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "6th arrondissement",
+        "evidence": {
+          "total_cells": 16,
+          "venue_count": 119,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": true,
+        "total_cells": 16,
+        "venue_count": 119,
+        "stage_counts": {
+          "Unclassified": 16
+        },
+        "viable_cells": 16,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6447368421052632,
+          "venue_count": 119,
+          "buzz_percentile": 90.0309,
+          "saturation_percentile": 84.5343,
+          "net_openings_24m_per_venue": 0.1597,
+          "attention_trend_pct_per_month": 0.0312
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 78.95,
+          "saturation": 57.89,
+          "net_openings": 36.84,
+          "attention_trend": 26.32
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "7th arrondissement",
+        "evidence": {
+          "total_cells": 38,
+          "venue_count": 73,
+          "low_evidence": true,
+          "evidence_label": "Low evidence",
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 38,
+        "venue_count": 73,
+        "stage_counts": {
+          "Unclassified": 38
+        },
+        "viable_cells": 38,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7291666666666666,
+          "venue_count": 73,
+          "buzz_percentile": 78.0333,
+          "saturation_percentile": 55.8895,
+          "net_openings_24m_per_venue": 0.1507,
+          "attention_trend_pct_per_month": 0.0132
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 47.37,
+          "saturation": 5.26,
+          "net_openings": 31.58,
+          "attention_trend": 15.79
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 34.21
+      },
+      {
+        "area": "8th arrondissement",
+        "evidence": {
+          "total_cells": 40,
+          "venue_count": 183,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 40,
+        "venue_count": 183,
+        "stage_counts": {
+          "Saturated": 1,
+          "Unclassified": 39
+        },
+        "viable_cells": 40,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6967741935483871,
+          "venue_count": 183,
+          "buzz_percentile": 79.0703,
+          "saturation_percentile": 78.7275,
+          "net_openings_24m_per_venue": 0.2459,
+          "attention_trend_pct_per_month": 0.5546
+        },
+        "classified_cells": 1,
+        "classified_share": 0.025,
+        "rank_percentiles": {
+          "buzz": 52.63,
+          "saturation": 52.63,
+          "net_openings": 89.47,
+          "attention_trend": 84.21
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "9th arrondissement",
+        "evidence": {
+          "total_cells": 23,
+          "venue_count": 220,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": false,
+        "total_cells": 23,
+        "venue_count": 220,
+        "stage_counts": {
+          "Saturated": 1,
+          "Unclassified": 22
+        },
+        "viable_cells": 23,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.776536312849162,
+          "venue_count": 220,
+          "buzz_percentile": 87.0582,
+          "saturation_percentile": 94.1894,
+          "net_openings_24m_per_venue": 0.1273,
+          "attention_trend_pct_per_month": 0.2762
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0435,
+        "rank_percentiles": {
+          "buzz": 68.42,
+          "saturation": 94.74,
+          "net_openings": 15.79,
+          "attention_trend": 68.42
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "10th arrondissement",
+        "evidence": {
+          "total_cells": 30,
+          "venue_count": 229,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 30,
+        "venue_count": 229,
+        "stage_counts": {
+          "Unclassified": 30
+        },
+        "viable_cells": 30,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7751479289940828,
+          "venue_count": 229,
+          "buzz_percentile": 82.4223,
+          "saturation_percentile": 86.385,
+          "net_openings_24m_per_venue": 0.1266,
+          "attention_trend_pct_per_month": 0.1797
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 57.89,
+          "saturation": 68.42,
+          "net_openings": 10.53,
+          "attention_trend": 57.89
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "11th arrondissement",
+        "evidence": {
+          "total_cells": 36,
+          "venue_count": 369,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 36,
+        "venue_count": 369,
+        "stage_counts": {
+          "Unclassified": 36
+        },
+        "viable_cells": 36,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6894977168949772,
+          "venue_count": 369,
+          "buzz_percentile": 83.3869,
+          "saturation_percentile": 87.6253,
+          "net_openings_24m_per_venue": 0.1626,
+          "attention_trend_pct_per_month": 0.0342
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 63.16,
+          "saturation": 78.95,
+          "net_openings": 42.11,
+          "attention_trend": 31.58
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "12th arrondissement",
+        "evidence": {
+          "total_cells": 61,
+          "venue_count": 179,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 61,
+        "venue_count": 179,
+        "stage_counts": {
+          "Unclassified": 61
+        },
+        "viable_cells": 61,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7258064516129032,
+          "venue_count": 179,
+          "buzz_percentile": 56.6612,
+          "saturation_percentile": 68.6974,
+          "net_openings_24m_per_venue": 0.1676,
+          "attention_trend_pct_per_month": 0.6087
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 15.79,
+          "saturation": 36.84,
+          "net_openings": 52.63,
+          "attention_trend": 94.74
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 13.16
+      },
+      {
+        "area": "13th arrondissement",
+        "evidence": {
+          "total_cells": 72,
+          "venue_count": 115,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 72,
+        "venue_count": 115,
+        "stage_counts": {
+          "Unclassified": 72
+        },
+        "viable_cells": 72,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.68,
+          "venue_count": 115,
+          "buzz_percentile": 41.6996,
+          "saturation_percentile": 59.2392,
+          "net_openings_24m_per_venue": 0.0783,
+          "attention_trend_pct_per_month": 1.0802
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 0,
+          "saturation": 15.79,
+          "net_openings": 0,
+          "attention_trend": 100
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 34.21
+      },
+      {
+        "area": "14th arrondissement",
+        "evidence": {
+          "total_cells": 54,
+          "venue_count": 115,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 54,
+        "venue_count": 115,
+        "stage_counts": {
+          "Unclassified": 54
+        },
+        "viable_cells": 54,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.723404255319149,
+          "venue_count": 115,
+          "buzz_percentile": 58.0573,
+          "saturation_percentile": 65.8849,
+          "net_openings_24m_per_venue": 0.1304,
+          "attention_trend_pct_per_month": 0.0612
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 21.05,
+          "saturation": 31.58,
+          "net_openings": 26.32,
+          "attention_trend": 36.84
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 13.16
+      },
+      {
+        "area": "15th arrondissement",
+        "evidence": {
+          "total_cells": 82,
+          "venue_count": 158,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 82,
+        "venue_count": 158,
+        "stage_counts": {
+          "Unclassified": 82
+        },
+        "viable_cells": 82,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6394557823129252,
+          "venue_count": 158,
+          "buzz_percentile": 50.2035,
+          "saturation_percentile": 59.2333,
+          "net_openings_24m_per_venue": 0.1646,
+          "attention_trend_pct_per_month": 0.5029
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 10.53,
+          "saturation": 10.53,
+          "net_openings": 47.37,
+          "attention_trend": 78.95
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "16th arrondissement",
+        "evidence": {
+          "total_cells": 77,
+          "venue_count": 98,
+          "low_evidence": true,
+          "evidence_label": "Low evidence",
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 77,
+        "venue_count": 98,
+        "stage_counts": {
+          "Unclassified": 77
+        },
+        "viable_cells": 77,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7099236641221374,
+          "venue_count": 98,
+          "buzz_percentile": 67.9253,
+          "saturation_percentile": 45.6047,
+          "net_openings_24m_per_venue": 0.2857,
+          "attention_trend_pct_per_month": 0.2817
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 36.84,
+          "saturation": 0,
+          "net_openings": 100,
+          "attention_trend": 73.68
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "17th arrondissement",
+        "evidence": {
+          "total_cells": 58,
+          "venue_count": 174,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": true,
+        "total_cells": 58,
+        "venue_count": 174,
+        "stage_counts": {
+          "Unclassified": 58
+        },
+        "viable_cells": 58,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6861702127659575,
+          "venue_count": 174,
+          "buzz_percentile": 62.9773,
+          "saturation_percentile": 71.3704,
+          "net_openings_24m_per_venue": 0.1724,
+          "attention_trend_pct_per_month": 0.5715
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 31.58,
+          "saturation": 42.11,
+          "net_openings": 63.16,
+          "attention_trend": 89.47
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "18th arrondissement",
+        "evidence": {
+          "total_cells": 58,
+          "venue_count": 295,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": true,
+        "total_cells": 58,
+        "venue_count": 295,
+        "stage_counts": {
+          "Unclassified": 58
+        },
+        "viable_cells": 58,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6907216494845361,
+          "venue_count": 295,
+          "buzz_percentile": 68.6858,
+          "saturation_percentile": 74.4818,
+          "net_openings_24m_per_venue": 0.1695,
+          "attention_trend_pct_per_month": 0.2706
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 42.11,
+          "saturation": 47.37,
+          "net_openings": 57.89,
+          "attention_trend": 63.16
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "19th arrondissement",
+        "evidence": {
+          "total_cells": 67,
+          "venue_count": 168,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 67,
+        "venue_count": 168,
+        "stage_counts": {
+          "Unclassified": 67
+        },
+        "viable_cells": 67,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7142857142857143,
+          "venue_count": 168,
+          "buzz_percentile": 49.7684,
+          "saturation_percentile": 61.7498,
+          "net_openings_24m_per_venue": 0.125,
+          "attention_trend_pct_per_month": -0.1011
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 5.26,
+          "saturation": 21.05,
+          "net_openings": 5.26,
+          "attention_trend": 0
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "20th arrondissement",
+        "evidence": {
+          "total_cells": 62,
+          "venue_count": 204,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 0
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": true,
+        "total_cells": 62,
+        "venue_count": 204,
+        "stage_counts": {
+          "Unclassified": 62
+        },
+        "viable_cells": 62,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6330275229357798,
+          "venue_count": 204,
+          "buzz_percentile": 61.6103,
+          "saturation_percentile": 63.0252,
+          "net_openings_24m_per_venue": 0.1275,
+          "attention_trend_pct_per_month": 0.0941
+        },
+        "classified_cells": 0,
+        "classified_share": 0,
+        "rank_percentiles": {
+          "buzz": 26.32,
+          "saturation": 26.32,
+          "net_openings": 21.05,
+          "attention_trend": 47.37
+        },
+        "cell_dominant_stage": "Unclassified",
+        "distance_to_nearest_cut": 2.63
+      }
+    ],
+    "traditional_restaurant": [
+      {
+        "area": "1st arrondissement",
+        "evidence": {
+          "total_cells": 14,
+          "venue_count": 735,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 14,
+        "venue_count": 735,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 3,
+          "Unclassified": 10
+        },
+        "viable_cells": 14,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7572815533980582,
+          "venue_count": 735,
+          "buzz_percentile": 95.574,
+          "saturation_percentile": 90.9954,
+          "net_openings_24m_per_venue": -0.0027,
+          "attention_trend_pct_per_month": 0.1183
+        },
+        "classified_cells": 4,
+        "classified_share": 0.2857,
+        "rank_percentiles": {
+          "buzz": 89.47,
+          "saturation": 89.47,
+          "net_openings": 26.32,
+          "attention_trend": 52.63
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "2nd arrondissement",
+        "evidence": {
+          "total_cells": 10,
+          "venue_count": 643,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 10,
+        "venue_count": 643,
+        "stage_counts": {
+          "Saturated": 1,
+          "Unclassified": 9
+        },
+        "viable_cells": 10,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7094017094017094,
+          "venue_count": 643,
+          "buzz_percentile": 95.0167,
+          "saturation_percentile": 97.0632,
+          "net_openings_24m_per_venue": 0.0218,
+          "attention_trend_pct_per_month": 0.0293
+        },
+        "classified_cells": 1,
+        "classified_share": 0.1,
+        "rank_percentiles": {
+          "buzz": 84.21,
+          "saturation": 100,
+          "net_openings": 84.21,
+          "attention_trend": 21.05
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "3rd arrondissement",
+        "evidence": {
+          "total_cells": 13,
+          "venue_count": 484,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 13,
+        "venue_count": 484,
+        "stage_counts": {
+          "Saturated": 3,
+          "Unclassified": 10
+        },
+        "viable_cells": 13,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.75,
+          "venue_count": 484,
+          "buzz_percentile": 97.5815,
+          "saturation_percentile": 90.1164,
+          "net_openings_24m_per_venue": 0.0062,
+          "attention_trend_pct_per_month": 0.0034
+        },
+        "classified_cells": 3,
+        "classified_share": 0.2308,
+        "rank_percentiles": {
+          "buzz": 100,
+          "saturation": 84.21,
+          "net_openings": 57.89,
+          "attention_trend": 5.26
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 34.21
+      },
+      {
+        "area": "4th arrondissement",
+        "evidence": {
+          "total_cells": 11,
+          "venue_count": 512,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 5
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": true,
+        "total_cells": 11,
+        "venue_count": 512,
+        "stage_counts": {
+          "Saturated": 5,
+          "Unclassified": 6
+        },
+        "viable_cells": 11,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7432432432432432,
+          "venue_count": 512,
+          "buzz_percentile": 95.6901,
+          "saturation_percentile": 86.2559,
+          "net_openings_24m_per_venue": -0.0059,
+          "attention_trend_pct_per_month": 0.0779
+        },
+        "classified_cells": 5,
+        "classified_share": 0.4545,
+        "rank_percentiles": {
+          "buzz": 94.74,
+          "saturation": 63.16,
+          "net_openings": 15.79,
+          "attention_trend": 42.11
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "5th arrondissement",
+        "evidence": {
+          "total_cells": 23,
+          "venue_count": 784,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 6
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 23,
+        "venue_count": 784,
+        "stage_counts": {
+          "Peak": 2,
+          "Saturated": 4,
+          "Unclassified": 17
+        },
+        "viable_cells": 23,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7203389830508474,
+          "venue_count": 784,
+          "buzz_percentile": 89.2944,
+          "saturation_percentile": 87.8436,
+          "net_openings_24m_per_venue": -0.0038,
+          "attention_trend_pct_per_month": 0.0035
+        },
+        "classified_cells": 6,
+        "classified_share": 0.2609,
+        "rank_percentiles": {
+          "buzz": 73.68,
+          "saturation": 78.95,
+          "net_openings": 21.05,
+          "attention_trend": 10.53
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "6th arrondissement",
+        "evidence": {
+          "total_cells": 16,
+          "venue_count": 606,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": true,
+        "total_cells": 16,
+        "venue_count": 606,
+        "stage_counts": {
+          "Peak": 1,
+          "Fading": 1,
+          "Saturated": 2,
+          "Unclassified": 12
+        },
+        "viable_cells": 16,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6447368421052632,
+          "venue_count": 606,
+          "buzz_percentile": 90.0309,
+          "saturation_percentile": 85.6296,
+          "net_openings_24m_per_venue": 0.005,
+          "attention_trend_pct_per_month": 0.0312
+        },
+        "classified_cells": 4,
+        "classified_share": 0.25,
+        "rank_percentiles": {
+          "buzz": 78.95,
+          "saturation": 57.89,
+          "net_openings": 52.63,
+          "attention_trend": 26.32
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "7th arrondissement",
+        "evidence": {
+          "total_cells": 38,
+          "venue_count": 502,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 38,
+        "venue_count": 502,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 2,
+          "Unclassified": 35
+        },
+        "viable_cells": 38,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7291666666666666,
+          "venue_count": 502,
+          "buzz_percentile": 78.0333,
+          "saturation_percentile": 63.1783,
+          "net_openings_24m_per_venue": 0.0139,
+          "attention_trend_pct_per_month": 0.0132
+        },
+        "classified_cells": 3,
+        "classified_share": 0.0789,
+        "rank_percentiles": {
+          "buzz": 47.37,
+          "saturation": 26.32,
+          "net_openings": 73.68,
+          "attention_trend": 15.79
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "8th arrondissement",
+        "evidence": {
+          "total_cells": 40,
+          "venue_count": 976,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 40,
+        "venue_count": 976,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 3,
+          "Unclassified": 36
+        },
+        "viable_cells": 40,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6967741935483871,
+          "venue_count": 976,
+          "buzz_percentile": 79.0703,
+          "saturation_percentile": 77.2545,
+          "net_openings_24m_per_venue": 0.0143,
+          "attention_trend_pct_per_month": 0.5546
+        },
+        "classified_cells": 4,
+        "classified_share": 0.1,
+        "rank_percentiles": {
+          "buzz": 52.63,
+          "saturation": 52.63,
+          "net_openings": 78.95,
+          "attention_trend": 84.21
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "9th arrondissement",
+        "evidence": {
+          "total_cells": 23,
+          "venue_count": 1152,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 5
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": false,
+        "total_cells": 23,
+        "venue_count": 1152,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 4,
+          "Unclassified": 18
+        },
+        "viable_cells": 23,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.776536312849162,
+          "venue_count": 1152,
+          "buzz_percentile": 87.0582,
+          "saturation_percentile": 93.893,
+          "net_openings_24m_per_venue": 0.0043,
+          "attention_trend_pct_per_month": 0.2762
+        },
+        "classified_cells": 5,
+        "classified_share": 0.2174,
+        "rank_percentiles": {
+          "buzz": 68.42,
+          "saturation": 94.74,
+          "net_openings": 47.37,
+          "attention_trend": 68.42
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "10th arrondissement",
+        "evidence": {
+          "total_cells": 30,
+          "venue_count": 1057,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 4
+        },
+        "area_rule": {
+          "stage": "Peak",
+          "rule_id": "Q-PEAK",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Peak",
+        "borderline": true,
+        "total_cells": 30,
+        "venue_count": 1057,
+        "stage_counts": {
+          "Saturated": 4,
+          "Unclassified": 26
+        },
+        "viable_cells": 30,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Peak",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7751479289940828,
+          "venue_count": 1057,
+          "buzz_percentile": 82.4223,
+          "saturation_percentile": 86.9005,
+          "net_openings_24m_per_venue": 0.0227,
+          "attention_trend_pct_per_month": 0.1797
+        },
+        "classified_cells": 4,
+        "classified_share": 0.1333,
+        "rank_percentiles": {
+          "buzz": 57.89,
+          "saturation": 73.68,
+          "net_openings": 89.47,
+          "attention_trend": 57.89
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "11th arrondissement",
+        "evidence": {
+          "total_cells": 36,
+          "venue_count": 1206,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 12
+        },
+        "area_rule": {
+          "stage": "Saturated",
+          "rule_id": "Q-SAT",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_HIGH_FULLNESS"
+        },
+        "area_stage": "Saturated",
+        "borderline": false,
+        "total_cells": 36,
+        "venue_count": 1206,
+        "stage_counts": {
+          "Peak": 3,
+          "Saturated": 9,
+          "Unclassified": 24
+        },
+        "viable_cells": 36,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Saturated",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6894977168949772,
+          "venue_count": 1206,
+          "buzz_percentile": 83.3869,
+          "saturation_percentile": 86.5065,
+          "net_openings_24m_per_venue": -0.0008,
+          "attention_trend_pct_per_month": 0.0342
+        },
+        "classified_cells": 12,
+        "classified_share": 0.3333,
+        "rank_percentiles": {
+          "buzz": 63.16,
+          "saturation": 68.42,
+          "net_openings": 42.11,
+          "attention_trend": 31.58
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 18.42
+      },
+      {
+        "area": "12th arrondissement",
+        "evidence": {
+          "total_cells": 61,
+          "venue_count": 762,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 61,
+        "venue_count": 762,
+        "stage_counts": {
+          "Peak": 1,
+          "Saturated": 2,
+          "Unclassified": 58
+        },
+        "viable_cells": 61,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7258064516129032,
+          "venue_count": 762,
+          "buzz_percentile": 56.6612,
+          "saturation_percentile": 68.8107,
+          "net_openings_24m_per_venue": -0.0013,
+          "attention_trend_pct_per_month": 0.6087
+        },
+        "classified_cells": 3,
+        "classified_share": 0.0492,
+        "rank_percentiles": {
+          "buzz": 15.79,
+          "saturation": 36.84,
+          "net_openings": 36.84,
+          "attention_trend": 94.74
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 13.16
+      },
+      {
+        "area": "13th arrondissement",
+        "evidence": {
+          "total_cells": 72,
+          "venue_count": 671,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 72,
+        "venue_count": 671,
+        "stage_counts": {
+          "Saturated": 1,
+          "Unclassified": 71
+        },
+        "viable_cells": 72,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.68,
+          "venue_count": 671,
+          "buzz_percentile": 41.6996,
+          "saturation_percentile": 62.7195,
+          "net_openings_24m_per_venue": -0.0104,
+          "attention_trend_pct_per_month": 1.0802
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0139,
+        "rank_percentiles": {
+          "buzz": 0,
+          "saturation": 21.05,
+          "net_openings": 10.53,
+          "attention_trend": 100
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "14th arrondissement",
+        "evidence": {
+          "total_cells": 54,
+          "venue_count": 607,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 7
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 54,
+        "venue_count": 607,
+        "stage_counts": {
+          "Peak": 2,
+          "Fading": 2,
+          "Saturated": 3,
+          "Unclassified": 47
+        },
+        "viable_cells": 54,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.723404255319149,
+          "venue_count": 607,
+          "buzz_percentile": 58.0573,
+          "saturation_percentile": 66.408,
+          "net_openings_24m_per_venue": -0.0395,
+          "attention_trend_pct_per_month": 0.0612
+        },
+        "classified_cells": 7,
+        "classified_share": 0.1296,
+        "rank_percentiles": {
+          "buzz": 21.05,
+          "saturation": 31.58,
+          "net_openings": 0,
+          "attention_trend": 36.84
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 13.16
+      },
+      {
+        "area": "15th arrondissement",
+        "evidence": {
+          "total_cells": 82,
+          "venue_count": 991,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 82,
+        "venue_count": 991,
+        "stage_counts": {
+          "Peak": 1,
+          "Unclassified": 81
+        },
+        "viable_cells": 82,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6394557823129252,
+          "venue_count": 991,
+          "buzz_percentile": 50.2035,
+          "saturation_percentile": 62.0327,
+          "net_openings_24m_per_venue": 0.0293,
+          "attention_trend_pct_per_month": 0.5029
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0122,
+        "rank_percentiles": {
+          "buzz": 10.53,
+          "saturation": 15.79,
+          "net_openings": 100,
+          "attention_trend": 78.95
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 28.95
+      },
+      {
+        "area": "16th arrondissement",
+        "evidence": {
+          "total_cells": 77,
+          "venue_count": 717,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": false,
+        "total_cells": 77,
+        "venue_count": 717,
+        "stage_counts": {
+          "Peak": 3,
+          "Unclassified": 74
+        },
+        "viable_cells": 77,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7099236641221374,
+          "venue_count": 717,
+          "buzz_percentile": 67.9253,
+          "saturation_percentile": 46.4269,
+          "net_openings_24m_per_venue": 0.0126,
+          "attention_trend_pct_per_month": 0.2817
+        },
+        "classified_cells": 3,
+        "classified_share": 0.039,
+        "rank_percentiles": {
+          "buzz": 36.84,
+          "saturation": 0,
+          "net_openings": 68.42,
+          "attention_trend": 73.68
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 23.68
+      },
+      {
+        "area": "17th arrondissement",
+        "evidence": {
+          "total_cells": 58,
+          "venue_count": 1018,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": true,
+        "total_cells": 58,
+        "venue_count": 1018,
+        "stage_counts": {
+          "Peak": 2,
+          "Saturated": 1,
+          "Unclassified": 55
+        },
+        "viable_cells": 58,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6861702127659575,
+          "venue_count": 1018,
+          "buzz_percentile": 62.9773,
+          "saturation_percentile": 72.412,
+          "net_openings_24m_per_venue": -0.002,
+          "attention_trend_pct_per_month": 0.5715
+        },
+        "classified_cells": 3,
+        "classified_share": 0.0517,
+        "rank_percentiles": {
+          "buzz": 31.58,
+          "saturation": 42.11,
+          "net_openings": 31.58,
+          "attention_trend": 89.47
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 7.89
+      },
+      {
+        "area": "18th arrondissement",
+        "evidence": {
+          "total_cells": 58,
+          "venue_count": 1207,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 6
+        },
+        "area_rule": {
+          "stage": "Emerging",
+          "rule_id": "Q-EMG",
+          "reason_code": "QUADRANT_HIGH_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Emerging",
+        "borderline": true,
+        "total_cells": 58,
+        "venue_count": 1207,
+        "stage_counts": {
+          "Peak": 4,
+          "Saturated": 2,
+          "Unclassified": 52
+        },
+        "viable_cells": 58,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Emerging",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6907216494845361,
+          "venue_count": 1207,
+          "buzz_percentile": 68.6858,
+          "saturation_percentile": 73.8437,
+          "net_openings_24m_per_venue": 0.0249,
+          "attention_trend_pct_per_month": 0.2706
+        },
+        "classified_cells": 6,
+        "classified_share": 0.1034,
+        "rank_percentiles": {
+          "buzz": 42.11,
+          "saturation": 47.37,
+          "net_openings": 94.74,
+          "attention_trend": 63.16
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 2.63
+      },
+      {
+        "area": "19th arrondissement",
+        "evidence": {
+          "total_cells": 67,
+          "venue_count": 639,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 1
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": false,
+        "total_cells": 67,
+        "venue_count": 639,
+        "stage_counts": {
+          "Saturated": 1,
+          "Unclassified": 66
+        },
+        "viable_cells": 67,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.7142857142857143,
+          "venue_count": 639,
+          "buzz_percentile": 49.7684,
+          "saturation_percentile": 59.3944,
+          "net_openings_24m_per_venue": 0.0078,
+          "attention_trend_pct_per_month": -0.1011
+        },
+        "classified_cells": 1,
+        "classified_share": 0.0149,
+        "rank_percentiles": {
+          "buzz": 5.26,
+          "saturation": 5.26,
+          "net_openings": 63.16,
+          "attention_trend": 0
+        },
+        "cell_dominant_stage": "Saturated",
+        "distance_to_nearest_cut": 44.74
+      },
+      {
+        "area": "20th arrondissement",
+        "evidence": {
+          "total_cells": 62,
+          "venue_count": 705,
+          "low_evidence": false,
+          "evidence_label": null,
+          "not_enough_data": false,
+          "classified_cells": 3
+        },
+        "area_rule": {
+          "stage": "Fading",
+          "rule_id": "Q-FADE",
+          "reason_code": "QUADRANT_LOW_MOMENTUM_LOW_FULLNESS"
+        },
+        "area_stage": "Fading",
+        "borderline": true,
+        "total_cells": 62,
+        "venue_count": 705,
+        "stage_counts": {
+          "Peak": 1,
+          "Fading": 1,
+          "Saturated": 1,
+          "Unclassified": 59
+        },
+        "viable_cells": 62,
+        "coverage_note": "Many cells unclassified (thin supply or low digital signal).",
+        "dominant_stage": "Fading",
+        "aggregate_scope": "arrondissement_area_inputs_v4",
+        "aggregate_inputs": {
+          "survival_3y": 0.6330275229357798,
+          "venue_count": 705,
+          "buzz_percentile": 61.6103,
+          "saturation_percentile": 60.0122,
+          "net_openings_24m_per_venue": -0.0241,
+          "attention_trend_pct_per_month": 0.0941
+        },
+        "classified_cells": 3,
+        "classified_share": 0.0484,
+        "rank_percentiles": {
+          "buzz": 26.32,
+          "saturation": 10.53,
+          "net_openings": 5.26,
+          "attention_trend": 47.37
+        },
+        "cell_dominant_stage": "Peak",
+        "distance_to_nearest_cut": 2.63
+      }
+    ]
+  },
+  "stage_distribution_by_format": {
+    "all": {
+      "Peak": 37,
+      "Fading": 3,
+      "Saturated": 31,
+      "Unclassified": 869
+    },
+    "fast_food": {
+      "Peak": 19,
+      "Fading": 2,
+      "Saturated": 30,
+      "Unclassified": 889
+    },
+    "bars_cafes": {
+      "Saturated": 2,
+      "Unclassified": 938
+    },
+    "traditional_restaurant": {
+      "Peak": 24,
+      "Fading": 4,
+      "Saturated": 51,
+      "Unclassified": 861
+    }
+  },
+  "area_stage_distribution_by_format": {
+    "all": {
+      "Peak": 4,
+      "Fading": 4,
+      "Emerging": 6,
+      "Saturated": 6
+    },
+    "fast_food": {
+      "Peak": 4,
+      "Fading": 4,
+      "Emerging": 6,
+      "Saturated": 6
+    },
+    "bars_cafes": {
+      "Peak": 4,
+      "Fading": 4,
+      "Emerging": 6,
+      "Saturated": 6
+    },
+    "traditional_restaurant": {
+      "Peak": 4,
+      "Fading": 4,
+      "Emerging": 6,
+      "Saturated": 6
+    }
+  },
+  "build_checksum": "7d4f2ea420923d1c4ae3e4ed4b30ce82564322593e6f3e05614094d1efa00e66",
+  "etag": "7d4f2ea420923d1c4ae3e4ed4b30ce82",
+  "server_ms": 69.76
+}

@@ -1,0 +1,17 @@
+{
+  "status": "warming",
+  "service": "vantage-backend",
+  "database_name": "vantage",
+  "api_features": "2026-10-03-analytics-city-pillar-mean-raw-v2",
+  "analytics_computation_version": "insights-executive-report-v1",
+  "decisions_engine": {
+    "ready": false,
+    "ready_at": null,
+    "entries": 0,
+    "warm_error": null,
+    "warming": true
+  },
+  "ready": false,
+  "deferred_warm_ready": false,
+  "warm_started_at": 1793135313.6523197
+}

@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "radius_m": 500,
+    "brand_id": 2,
+    "method": "area",
+    "overlap_method_note": "Circle–circle lens overlap; share is vs the smaller catchment.",
+    "build_ms": 117.83,
+    "build_breakdown": {
+      "load_locations_ms": 116.32,
+      "build_pairs_ms": 0.04,
+      "coverage_gaps_ms": 1.47,
+      "total_ms": 117.83
+    }
+  },
+  "locations": [
+    {
+      "id": 1,
+      "name": "Paris 2",
+      "brand_id": 2,
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "lat": 48.868346,
+      "lng": 2.343277,
+      "status": "active",
+      "address": "128 Rue Réaumur, Paris",
+      "h3_index": "891fb46666bffff",
+      "area_cell_id": 696,
+      "area_label": "2nd arrondissement"
+    },
+    {
+      "id": 2,
+      "name": "Paris 4",
+      "brand_id": 2,
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "lat": 48.85528,
+      "lng": 2.36836,
+      "status": "active",
+      "address": "21 Bd Beaumarchais, Paris",
+      "h3_index": "891fb46622bffff",
+      "area_cell_id": 503,
+      "area_label": "4th arrondissement"
+    },
+    {
+      "id": 3,
+      "name": "Paris 17",
+      "brand_id": 2,
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "lat": 48.879475,
+      "lng": 2.284277,
+      "status": "active",
+      "address": "86 Bd Gouvion-Saint-Cyr, Paris",
+      "h3_index": "891fb475aabffff",
+      "area_cell_id": 1167,
+      "area_label": "17th arrondissement"
+    }
+  ],
+  "kpis": {
+    "location_count": 3,
+    "brand_count": 1,
+    "areas_covered": 3,
+    "mean_nearest_neighbor_m": 3056.6,
+    "high_risk_pair_count": 0
+  },
+  "pairs": [],
+  "closest_pair": {
+    "location_a_id": 1,
+    "location_b_id": 2,
+    "location_a_name": "Paris 2",
+    "location_b_name": "Paris 4",
+    "distance_m": 2340.4
+  },
+  "coverage_gaps": [
+    {
+      "h3_index": "891fb46448fffff",
+      "area_cell_id": 252,
+      "area_label": "12th arrondissement",
+      "opportunity_score": 100,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.8473486834513,
+      "lng": 2.3765892243921813
+    },
+    {
+      "h3_index": "891fb4644bbffff",
+      "area_cell_id": 262,
+      "area_label": "12th arrondissement",
+      "opportunity_score": 97.7,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.84752277869097,
+      "lng": 2.3809084899836956
+    },
+    {
+      "h3_index": "891fb4671dbffff",
+      "area_cell_id": 875,
+      "area_label": "6th arrondissement",
+      "opportunity_score": 96.9,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.84285956366407,
+      "lng": 2.3317284273299106
+    },
+    {
+      "h3_index": "891fb467013ffff",
+      "area_cell_id": 782,
+      "area_label": "15th arrondissement",
+      "opportunity_score": 95.8,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.842154225946615,
+      "lng": 2.3144439006945334
+    },
+    {
+      "h3_index": "891fb4671c7ffff",
+      "area_cell_id": 870,
+      "area_label": "5th arrondissement",
+      "opportunity_score": 95.6,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.84321121730088,
+      "lng": 2.340369733873043
+    },
+    {
+      "h3_index": "891fb47597bffff",
+      "area_cell_id": 1124,
+      "area_label": "17th arrondissement",
+      "opportunity_score": 94.9,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.88783238582123,
+      "lng": 2.3210405209889085
+    },
+    {
+      "h3_index": "891fb475bb3ffff",
+      "area_cell_id": 1218,
+      "area_label": "17th arrondissement",
+      "opportunity_score": 94.6,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.88491870724409,
+      "lng": 2.31505595461353
+    },
+    {
+      "h3_index": "891fb4670d3ffff",
+      "area_cell_id": 824,
+      "area_label": "15th arrondissement",
+      "opportunity_score": 94.5,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.84436319119621,
+      "lng": 2.3031372741873404
+    },
+    {
+      "h3_index": "891fb475bd7ffff",
+      "area_cell_id": 1226,
+      "area_label": "17th arrondissement",
+      "opportunity_score": 94.4,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.88165219114046,
+      "lng": 2.3004222553252545
+    },
+    {
+      "h3_index": "891fb467067ffff",
+      "area_cell_id": 800,
+      "area_label": "14th arrondissement",
+      "opportunity_score": 94.2,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.83190289004703,
+      "lng": 2.3250922522845605
+    },
+    {
+      "h3_index": "891fb4676b3ffff",
+      "area_cell_id": 1071,
+      "area_label": "15th arrondissement",
+      "opportunity_score": 94.1,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.84657126423875,
+      "lng": 2.291828556818314
+    },
+    {
+      "h3_index": "891fb4644d7ffff",
+      "area_cell_id": 268,
+      "area_label": "12th arrondissement",
+      "opportunity_score": 93.9,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.846999985936826,
+      "lng": 2.367950213484678
+    },
+    {
+      "h3_index": "891fb475ba3ffff",
+      "area_cell_id": 1214,
+      "area_label": "17th arrondissement",
+      "opportunity_score": 93.9,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.88235610859784,
+      "lng": 2.317720332208145
+    },
+    {
+      "h3_index": "891fb475973ffff",
+      "area_cell_id": 1122,
+      "area_label": "17th arrondissement",
+      "opportunity_score": 93.8,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.89057034451156,
+      "lng": 2.322700800672068
+    },
+    {
+      "h3_index": "891fb46702bffff",
+      "area_cell_id": 787,
+      "area_label": "14th arrondissement",
+      "opportunity_score": 93.5,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.83464223807805,
+      "lng": 2.3267511110642203
+    },
+    {
+      "h3_index": "891fb47596bffff",
+      "area_cell_id": 1120,
+      "area_label": "17th arrondissement",
+      "opportunity_score": 93.4,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.88526973771633,
+      "lng": 2.3237046154623457
+    },
+    {
+      "h3_index": "891fb47594bffff",
+      "area_cell_id": 1113,
+      "area_label": "17th arrondissement",
+      "opportunity_score": 93.2,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.887481267113685,
+      "lng": 2.312391280434299
+    },
+    {
+      "h3_index": "891fb467637ffff",
+      "area_cell_id": 1044,
+      "area_label": "15th arrondissement",
+      "opportunity_score": 93.1,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.83888357990447,
+      "lng": 2.2998205144246806
+    },
+    {
+      "h3_index": "891fb475bafffff",
+      "area_cell_id": 1217,
+      "area_label": "8th arrondissement",
+      "opportunity_score": 92.7,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.879793471203214,
+      "lng": 2.320384413256101
+    },
+    {
+      "h3_index": "891fb467687ffff",
+      "area_cell_id": 1061,
+      "area_label": "15th arrondissement",
+      "opportunity_score": 92.5,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.8463937411775,
+      "lng": 2.287505811048194
+    },
+    {
+      "h3_index": "891fb4660d7ffff",
+      "area_cell_id": 453,
+      "area_label": "10th arrondissement",
+      "opportunity_score": 92.4,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.88410404715874,
+      "lng": 2.3609543488350986
+    },
+    {
+      "h3_index": "891fb47586fffff",
+      "area_cell_id": 1093,
+      "area_label": "17th arrondissement",
+      "opportunity_score": 92.4,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.88421461314337,
+      "lng": 2.2977567185246364
+    },
+    {
+      "h3_index": "891fb46634fffff",
+      "area_cell_id": 560,
+      "area_label": "11th arrondissement",
+      "opportunity_score": 92.3,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.852997401109036,
+      "lng": 2.3842304201291316
+    },
+    {
+      "h3_index": "891fb46645bffff",
+      "area_cell_id": 612,
+      "area_label": "18th arrondissement",
+      "opportunity_score": 92,
+      "city_id": 1,
+      "city_name": "Paris",
+      "lat": 48.89127004806701,
+      "lng": 2.339997886639034
+    }
+  ],
+  "coverage_gap_groups": [
+    {
+      "area_label": "12th arrondissement",
+      "top_opportunity_score": 100,
+      "cell_count": 25,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb46448fffff"
+    },
+    {
+      "area_label": "6th arrondissement",
+      "top_opportunity_score": 96.9,
+      "cell_count": 9,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb4671dbffff"
+    },
+    {
+      "area_label": "15th arrondissement",
+      "top_opportunity_score": 95.8,
+      "cell_count": 44,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb467013ffff"
+    },
+    {
+      "area_label": "5th arrondissement",
+      "top_opportunity_score": 95.6,
+      "cell_count": 13,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb4671c7ffff"
+    },
+    {
+      "area_label": "17th arrondissement",
+      "top_opportunity_score": 94.9,
+      "cell_count": 29,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb47597bffff"
+    },
+    {
+      "area_label": "14th arrondissement",
+      "top_opportunity_score": 94.2,
+      "cell_count": 19,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb467067ffff"
+    },
+    {
+      "area_label": "8th arrondissement",
+      "top_opportunity_score": 92.7,
+      "cell_count": 5,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb475bafffff"
+    },
+    {
+      "area_label": "10th arrondissement",
+      "top_opportunity_score": 92.4,
+      "cell_count": 15,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb4660d7ffff"
+    },
+    {
+      "area_label": "11th arrondissement",
+      "top_opportunity_score": 92.3,
+      "cell_count": 26,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb46634fffff"
+    },
+    {
+      "area_label": "18th arrondissement",
+      "top_opportunity_score": 92,
+      "cell_count": 20,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb46645bffff"
+    },
+    {
+      "area_label": "16th arrondissement",
+      "top_opportunity_score": 90.4,
+      "cell_count": 26,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb462937ffff"
+    },
+    {
+      "area_label": "9th arrondissement",
+      "top_opportunity_score": 87,
+      "cell_count": 12,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb466633ffff"
+    },
+    {
+      "area_label": "13th arrondissement",
+      "top_opportunity_score": 84.9,
+      "cell_count": 16,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb4646dbffff"
+    },
+    {
+      "area_label": "20th arrondissement",
+      "top_opportunity_score": 84.4,
+      "cell_count": 6,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb46459bffff"
+    },
+    {
+      "area_label": "19th arrondissement",
+      "top_opportunity_score": 82.1,
+      "cell_count": 8,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb46602fffff"
+    },
+    {
+      "area_label": "7th arrondissement",
+      "top_opportunity_score": 81.7,
+      "cell_count": 8,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb467547ffff"
+    },
+    {
+      "area_label": "3rd arrondissement",
+      "top_opportunity_score": 79,
+      "cell_count": 5,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb466283ffff"
+    },
+    {
+      "area_label": "4th arrondissement",
+      "top_opportunity_score": 75.6,
+      "cell_count": 2,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb46621bffff"
+    },
+    {
+      "area_label": "48.8892°N, 2.2881°E",
+      "top_opportunity_score": 71.5,
+      "cell_count": 1,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb475847ffff"
+    },
+    {
+      "area_label": "2nd arrondissement",
+      "top_opportunity_score": 70.6,
+      "cell_count": 1,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb4662d7ffff"
+    },
+    {
+      "area_label": "48.8186°N, 2.3254°E",
+      "top_opportunity_score": 69.9,
+      "cell_count": 1,
+      "city_id": 1,
+      "city_name": "Paris",
+      "h3_index": "891fb467353ffff"
+    }
+  ]
+}

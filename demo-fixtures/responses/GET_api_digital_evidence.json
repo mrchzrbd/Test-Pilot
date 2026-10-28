@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "source": "digital_evidence_step1d",
+    "pre_registration_date": "2026-03-19",
+    "doc_checksum_sha256": "752a629a3b28a8384f1b84a79cf6cced70a4e5753bbd61b7a4d2cef98bf18ae4",
+    "city": "Paris",
+    "n_cells_eligible": 451,
+    "valid_years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2024
+    ],
+    "analysis_end": "2026-06-30",
+    "estimator_label": "n-weighted mean of per-year Spearman (year fixed effects)",
+    "bootstrap_n": 2000,
+    "bootstrap_seed": 42,
+    "placebo_gap_threshold": 0.1,
+    "whisker_axis": {
+      "min": -0.3,
+      "max": 0.3
+    },
+    "outcomes_never_inputs": true,
+    "etag": "194fb1efc8807f1af97e989543ae5377"
+  },
+  "correction_history": [
+    {
+      "step": "1",
+      "date": "2026-10-08",
+      "summary": "Initial compute reported Supported lead on Airbnb but violated COVID window rules and ANALYSIS_END cap on forward outcomes."
+    },
+    {
+      "step": "1c",
+      "date": "2026-10-08",
+      "summary": "Corrected Design B windows (COVID-clean years only; forward capped at 2026-06-30)."
+    },
+    {
+      "step": "1d",
+      "date": "2026-10-08",
+      "summary": "Replaced pooled-rank year-FE estimator with n-weighted per-year Spearman; legacy pooled-rank forward (~0.139) diverged from per-year table (~−0.029)."
+    }
+  ],
+  "verdict_rule": "Supported lead: Design B forward 95% CI excludes 0, forward rho exceeds placebo by ≥0.10, partial rho same sign as forward. Suggestive: forward CI excludes 0 but gap <0.10. Associated (concurrent only): Design A CI excludes 0 where Design B not feasible.",
+  "lead_lag": {
+    "signal_id": "airbnb_tourist_presence",
+    "n_cells": 449,
+    "n_cell_years": 2246,
+    "forward": {
+      "rho": -0.029,
+      "ci_low": -0.071,
+      "ci_high": 0.015
+    },
+    "placebo": {
+      "rho": -0.004,
+      "ci_low": -0.049,
+      "ci_high": 0.039
+    },
+    "gap": {
+      "rho": -0.024,
+      "ci_low": -0.09,
+      "ci_high": 0.044
+    },
+    "partial": {
+      "rho": 0.019,
+      "ci_low": -0.016,
+      "ci_high": 0.067
+    },
+    "n_weighted_forward": -0.0286,
+    "n_weighted_placebo": -0.0044,
+    "legacy_pooled_rank_forward": 0.139,
+    "legacy_pooled_rank_placebo": 0.161,
+    "per_year": [
+      {
+        "year": 2012,
+        "n": 104,
+        "forward_rho": -0.1704,
+        "placebo_rho": -0.025,
+        "predictor_start": "2011-01-01",
+        "predictor_end": "2012-12-31",
+        "forward_start": "2013-01-01",
+        "forward_end": "2014-12-31",
+        "placebo_start": "2010-01-01",
+        "placebo_end": "2011-12-31"
+      },
+      {
+        "year": 2013,
+        "n": 184,
+        "forward_rho": 0.0153,
+        "placebo_rho": -0.132,
+        "predictor_start": "2012-01-01",
+        "predictor_end": "2013-12-31",
+        "forward_start": "2014-01-01",
+        "forward_end": "2015-12-31",
+        "placebo_start": "2011-01-01",
+        "placebo_end": "2012-12-31"
+      },
+      {
+        "year": 2014,
+        "n": 306,
+        "forward_rho": -0.0903,
+        "placebo_rho": 0.0241,
+        "predictor_start": "2013-01-01",
+        "predictor_end": "2014-12-31",
+        "forward_start": "2015-01-01",
+        "forward_end": "2016-12-31",
+        "placebo_start": "2012-01-01",
+        "placebo_end": "2013-12-31"
+      },
+      {
+        "year": 2015,
+        "n": 371,
+        "forward_rho": -0.0105,
+        "placebo_rho": 0.0202,
+        "predictor_start": "2014-01-01",
+        "predictor_end": "2015-12-31",
+        "forward_start": "2016-01-01",
+        "forward_end": "2017-12-31",
+        "placebo_start": "2013-01-01",
+        "placebo_end": "2014-12-31"
+      },
+      {
+        "year": 2016,
+        "n": 404,
+        "forward_rho": -0.0166,
+        "placebo_rho": 0.0009,
+        "predictor_start": "2015-01-01",
+        "predictor_end": "2016-12-31",
+        "forward_start": "2017-01-01",
+        "forward_end": "2018-12-31",
+        "placebo_start": "2014-01-01",
+        "placebo_end": "2015-12-31"
+      },
+      {
+        "year": 2017,
+        "n": 428,
+        "forward_rho": -0.054,
+        "placebo_rho": 0.0207,
+        "predictor_start": "2016-01-01",
+        "predictor_end": "2017-12-31",
+        "forward_start": "2018-01-01",
+        "forward_end": "2019-12-31",
+        "placebo_start": "2015-01-01",
+        "placebo_end": "2016-12-31"
+      },
+      {
+        "year": 2024,
+        "n": 449,
+        "forward_rho": 0.0267,
+        "placebo_rho": -0.0159,
+        "predictor_start": "2023-01-01",
+        "predictor_end": "2024-12-31",
+        "forward_start": "2025-01-01",
+        "forward_end": "2026-06-30",
+        "placebo_start": "2022-01-01",
+        "placebo_end": "2023-12-31"
+      }
+    ],
+    "deciles": [
+      {
+        "bin": 1,
+        "mean_predictor": 34.925,
+        "mean_outcome": 8.372,
+        "n": 45
+      },
+      {
+        "bin": 2,
+        "mean_predictor": 50.247,
+        "mean_outcome": 7.151,
+        "n": 45
+      },
+      {
+        "bin": 3,
+        "mean_predictor": 58.954,
+        "mean_outcome": 9.872,
+        "n": 45
+      },
+      {
+        "bin": 4,
+        "mean_predictor": 66.573,
+        "mean_outcome": 15.388,
+        "n": 45
+      },
+      {
+        "bin": 5,
+        "mean_predictor": 72.702,
+        "mean_outcome": 6.169,
+        "n": 45
+      },
+      {
+        "bin": 6,
+        "mean_predictor": 78.292,
+        "mean_outcome": 6.465,
+        "n": 45
+      },
+      {
+        "bin": 7,
+        "mean_predictor": 83.461,
+        "mean_outcome": 6.332,
+        "n": 45
+      },
+      {
+        "bin": 8,
+        "mean_predictor": 88.268,
+        "mean_outcome": 9.23,
+        "n": 45
+      },
+      {
+        "bin": 9,
+        "mean_predictor": 93.003,
+        "mean_outcome": 7.801,
+        "n": 45
+      },
+      {
+        "bin": 10,
+        "mean_predictor": 97.682,
+        "mean_outcome": 7.628,
+        "n": 46
+      }
+    ],
+    "robustness": {
+      "label": "Exclude top 5% Airbnb score and Paris arrondissements 1–9",
+      "n_pairs": 2089,
+      "forward": {
+        "rho": -0.032,
+        "ci_low": -0.08,
+        "ci_high": 0.011
+      },
+      "placebo": {
+        "rho": -0.012
+      }
+    }
+  },
+  "signals": [
+    {
+      "id": "airbnb_tourist_presence",
+      "tier": "Proxy",
+      "display_name": "Tourist presence",
+      "designs_run": [
+        "B",
+        "A"
+      ],
+      "primary_design": "B",
+      "n_cells": 449,
+      "n_cell_years": 2246,
+      "valid_years": [
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2024
+      ],
+      "design_b": {
+        "forward": {
+          "rho": -0.029,
+          "ci_low": -0.071,
+          "ci_high": 0.015
+        },
+        "placebo": {
+          "rho": -0.004,
+          "ci_low": -0.049,
+          "ci_high": 0.039
+        },
+        "gap": {
+          "rho": -0.024,
+          "ci_low": -0.09,
+          "ci_high": 0.044
+        },
+        "partial": {
+          "rho": 0.019,
+          "ci_low": -0.016,
+          "ci_high": 0.067
+        }
+      },
+      "design_a": {
+        "rho": {
+          "rho": 0.018,
+          "ci_low": -0.071,
+          "ci_high": 0.113
+        },
+        "partial": {
+          "rho": 0.147,
+          "ci_low": 0.051,
+          "ci_high": 0.24
+        }
+      },
+      "verdict": "No evidence",
+      "effect_size_reading": "Corrected Design B (n-weighted per-year primary) does not show a reliable forward association. (|rho|=0.03: very weak)."
+    },
+    {
+      "id": "landmark_attention",
+      "tier": "Proxy",
+      "display_name": "Landmark attention",
+      "designs_run": [
+        "A"
+      ],
+      "primary_design": "A",
+      "n_cells": 451,
+      "n_cell_years": null,
+      "valid_years": [],
+      "design_b": null,
+      "design_a": {
+        "rho": {
+          "rho": 0.059,
+          "ci_low": -0.033,
+          "ci_high": 0.156
+        },
+        "partial": {
+          "rho": 0.098,
+          "ci_low": 0.002,
+          "ci_high": 0.184
+        }
+      },
+      "verdict": "No evidence",
+      "effect_size_reading": "No stable association detected under pre-registered rules. (|rho|=0.06: very weak)."
+    },
+    {
+      "id": "events_footfall",
+      "tier": "Proxy",
+      "display_name": "Events footfall",
+      "designs_run": [
+        "A"
+      ],
+      "primary_design": "A",
+      "n_cells": 451,
+      "n_cell_years": null,
+      "valid_years": [],
+      "design_b": null,
+      "design_a": {
+        "rho": {
+          "rho": 0.06,
+          "ci_low": -0.012,
+          "ci_high": 0.167
+        },
+        "partial": {
+          "rho": 0.079,
+          "ci_low": 0.002,
+          "ci_high": 0.185
+        }
+      },
+      "verdict": "No evidence",
+      "effect_size_reading": "No stable association detected under pre-registered rules. (|rho|=0.06: very weak)."
+    }
+  ],
+  "server_ms": 0.02
+}

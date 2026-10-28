@@ -1,0 +1,651 @@
+{
+  "engine_version": "1.2.0",
+  "mc_engine": "numpy",
+  "illustrative_label": "illustrative: virality inputs are assumptions",
+  "be_grid": [
+    90,
+    110,
+    130,
+    150,
+    200
+  ],
+  "regimes": {
+    "fad": {
+      "peak_uplift_target": {
+        "default": 2,
+        "min": 1,
+        "max": 4,
+        "source": "assumption"
+      },
+      "M": {
+        "default": 2.8,
+        "min": 0.5,
+        "max": 8,
+        "source": "assumption"
+      },
+      "h_weeks": {
+        "default": 2,
+        "min": 0.5,
+        "max": 8,
+        "source": "assumption"
+      },
+      "n_branching": {
+        "default": 0.28,
+        "min": 0,
+        "max": 0.95,
+        "source": "assumption"
+      },
+      "c_conversion": {
+        "default": 0.06,
+        "min": 0.01,
+        "max": 0.25,
+        "source": "assumption"
+      },
+      "retention_half_life_weeks": {
+        "default": 10,
+        "min": 4,
+        "max": 52,
+        "source": "assumption"
+      }
+    },
+    "trend": {
+      "peak_uplift_target": {
+        "default": 0.8,
+        "min": 0.3,
+        "max": 2,
+        "source": "assumption"
+      },
+      "M": {
+        "default": 1.35,
+        "min": 0.3,
+        "max": 6,
+        "source": "assumption"
+      },
+      "h_weeks": {
+        "default": 10,
+        "min": 2,
+        "max": 26,
+        "source": "assumption"
+      },
+      "n_branching": {
+        "default": 0.42,
+        "min": 0,
+        "max": 0.95,
+        "source": "assumption"
+      },
+      "c_conversion": {
+        "default": 0.2,
+        "min": 0.05,
+        "max": 0.5,
+        "source": "assumption"
+      },
+      "retention_half_life_weeks": {
+        "default": 36,
+        "min": 8,
+        "max": 104,
+        "source": "assumption"
+      }
+    },
+    "habit": {
+      "peak_uplift_target": {
+        "default": 0.25,
+        "min": 0.1,
+        "max": 1,
+        "source": "assumption"
+      },
+      "M": {
+        "default": 0.75,
+        "min": 0.1,
+        "max": 4,
+        "source": "assumption"
+      },
+      "h_weeks": {
+        "default": 22,
+        "min": 8,
+        "max": 52,
+        "source": "assumption"
+      },
+      "n_branching": {
+        "default": 0.3,
+        "min": 0,
+        "max": 0.95,
+        "source": "assumption"
+      },
+      "c_conversion": {
+        "default": 0.66,
+        "min": 0.1,
+        "max": 0.8,
+        "source": "assumption"
+      },
+      "retention_half_life_weeks": {
+        "default": 96,
+        "min": 26,
+        "max": 156,
+        "source": "assumption"
+      }
+    }
+  },
+  "parameters": [
+    {
+      "name": "sim_weeks",
+      "default": 104,
+      "min": 104,
+      "max": 104,
+      "source": "assumption",
+      "source_ref": "fixed horizon",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "mc_paths",
+      "default": 2000,
+      "min": 2000,
+      "max": 2000,
+      "source": "assumption",
+      "source_ref": "Monte Carlo paths",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "mc_sigma_M",
+      "default": 0.25,
+      "min": 0,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "lognormal noise on M",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "mc_sigma_h",
+      "default": 0.2,
+      "min": 0,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "lognormal noise on h",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "mc_sigma_c",
+      "default": 0.3,
+      "min": 0,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "lognormal noise on c",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "mc_sigma_n",
+      "default": 0.15,
+      "min": 0,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "lognormal noise on n",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "ramp_start",
+      "default": 0.4,
+      "min": 0.1,
+      "max": 0.9,
+      "source": "assumption",
+      "source_ref": "illustrative launch ramp",
+      "unit": "× steady",
+      "note": ""
+    },
+    {
+      "name": "ramp_weeks",
+      "default": 26,
+      "min": 8,
+      "max": 52,
+      "source": "assumption",
+      "source_ref": "illustrative weeks to steady structural demand",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "seasonal_shrink",
+      "default": 0.5,
+      "min": 0,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "tourist/landmark seasonality overstates restaurant seasonality",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "capacity_cap",
+      "default": 2.2,
+      "min": 1.2,
+      "max": 3,
+      "source": "assumption",
+      "source_ref": "max served vs structural steady-state (×100 units)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "overload_c_penalty",
+      "default": 0.5,
+      "min": 0,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "fractional reduction on c when cap binds",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "investment_buffer_weeks",
+      "default": 20,
+      "min": 0,
+      "max": 52,
+      "source": "assumption",
+      "source_ref": "weeks of break-even demand before surplus accrual",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "reshock_rate_per_year",
+      "default": 0,
+      "min": 0,
+      "max": 4,
+      "source": "assumption",
+      "source_ref": "Poisson re-shocks per year",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "reshock_size_rho",
+      "default": 0.35,
+      "min": 0.05,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "re-shock size = M × rho",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "competitor_validation_v",
+      "default": 0.15,
+      "min": 0,
+      "max": 0.5,
+      "source": "assumption",
+      "source_ref": "late return share of diverted demand",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "shock_week_t0",
+      "default": 8,
+      "min": 1,
+      "max": 52,
+      "source": "assumption",
+      "source_ref": "week of initial shock",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "buzz_m_mult_base",
+      "default": 0.7,
+      "min": 0.5,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "M multiplier floor",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "buzz_m_mult_slope",
+      "default": 0.6,
+      "min": 0.2,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "M multiplier × buzz_pct/100",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "sat_diversion_base",
+      "default": 0.05,
+      "min": 0,
+      "max": 0.2,
+      "source": "assumption",
+      "source_ref": "competitor diversion floor",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "sat_diversion_slope",
+      "default": 0.25,
+      "min": 0.1,
+      "max": 0.5,
+      "source": "assumption",
+      "source_ref": "diversion + slope×sat_pct/100",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "sat_structural_drag",
+      "default": 0.1,
+      "min": 0.05,
+      "max": 0.25,
+      "source": "assumption",
+      "source_ref": "persistent drag × sat_pct/100 on structural demand",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "diff_min_attention_originated_pp",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "source": "assumption",
+      "source_ref": "min spread in attention_originated_share P50 across demo cells (percentage points)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "diff_min_payback_weeks",
+      "default": 3,
+      "min": 1,
+      "max": 20,
+      "source": "assumption",
+      "source_ref": "min spread in payback P50 (weeks) across demo cells",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "diff_min_payback_before_closure",
+      "default": 0.05,
+      "min": 0.02,
+      "max": 0.2,
+      "source": "assumption",
+      "source_ref": "min spread in P(payback before closure) across demo cells",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_payback_acceleration_weeks",
+      "default": 8,
+      "min": 4,
+      "max": 20,
+      "source": "assumption",
+      "source_ref": "Structural vs attention-assisted: shock median payback ≥ this many weeks earlier than structural-only",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_does_not_payback_max_p",
+      "default": 0.1,
+      "min": 0.05,
+      "max": 0.3,
+      "source": "assumption",
+      "source_ref": "Does not pay back when P(payback in 104w) is below this",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_fragile_min_payback_104_p",
+      "default": 0.5,
+      "min": 0.4,
+      "max": 0.7,
+      "source": "assumption",
+      "source_ref": "Fragile only when P(payback in 104w) is at or above this",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_fragile_closure_payback_p",
+      "default": 0.5,
+      "min": 0.3,
+      "max": 0.7,
+      "source": "assumption",
+      "source_ref": "Fragile when P(payback before closure) is below this",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_attention_dependent_payback_p",
+      "default": 0.5,
+      "min": 0.4,
+      "max": 0.7,
+      "source": "assumption",
+      "source_ref": "Attention-dependent when structural does not pay back and shock P(payback in 104w) ≥ this",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_structural_margin_min_pp",
+      "default": 5,
+      "min": 3,
+      "max": 15,
+      "source": "assumption",
+      "source_ref": "Structural margin floor (pp)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_break_even_margin_abs_pp",
+      "default": 3,
+      "min": 1,
+      "max": 10,
+      "source": "assumption",
+      "source_ref": "At break-even |margin| below this (pp)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_assisted_margin_lo_pp",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "source": "assumption",
+      "source_ref": "Attention-assisted margin band low (pp)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "verdict_assisted_margin_hi_pp",
+      "default": 5,
+      "min": 3,
+      "max": 12,
+      "source": "assumption",
+      "source_ref": "Attention-assisted margin band high (pp)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "fad.peak_uplift_target",
+      "default": 2,
+      "min": 1,
+      "max": 4,
+      "source": "assumption",
+      "source_ref": "~+200% peak (A+U) vs structural",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "fad.M",
+      "default": 2.8,
+      "min": 0.5,
+      "max": 8,
+      "source": "assumption",
+      "source_ref": "regime impulse scale before buzz multiplier",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "fad.h_weeks",
+      "default": 2,
+      "min": 0.5,
+      "max": 8,
+      "source": "assumption",
+      "source_ref": "attention memory half-life (weeks)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "fad.n_branching",
+      "default": 0.28,
+      "min": 0,
+      "max": 0.95,
+      "source": "assumption",
+      "source_ref": "Hawkes branching ratio (<1)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "fad.c_conversion",
+      "default": 0.06,
+      "min": 0.01,
+      "max": 0.25,
+      "source": "assumption",
+      "source_ref": "durable share of attention if sustained",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "fad.retention_half_life_weeks",
+      "default": 10,
+      "min": 4,
+      "max": 52,
+      "source": "assumption",
+      "source_ref": "U low-pass half-life (weeks)",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "trend.peak_uplift_target",
+      "default": 0.8,
+      "min": 0.3,
+      "max": 2,
+      "source": "assumption",
+      "source_ref": "~+80% peak uplift",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "trend.M",
+      "default": 1.35,
+      "min": 0.3,
+      "max": 6,
+      "source": "assumption",
+      "source_ref": "impulse scale",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "trend.h_weeks",
+      "default": 10,
+      "min": 2,
+      "max": 26,
+      "source": "assumption",
+      "source_ref": "memory half-life",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "trend.n_branching",
+      "default": 0.42,
+      "min": 0,
+      "max": 0.95,
+      "source": "assumption",
+      "source_ref": "branching ratio",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "trend.c_conversion",
+      "default": 0.2,
+      "min": 0.05,
+      "max": 0.5,
+      "source": "assumption",
+      "source_ref": "durable conversion c",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "trend.retention_half_life_weeks",
+      "default": 36,
+      "min": 8,
+      "max": 104,
+      "source": "assumption",
+      "source_ref": "U retention half-life",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "habit.peak_uplift_target",
+      "default": 0.25,
+      "min": 0.1,
+      "max": 1,
+      "source": "assumption",
+      "source_ref": "~+25% peak uplift",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "habit.M",
+      "default": 0.75,
+      "min": 0.1,
+      "max": 4,
+      "source": "assumption",
+      "source_ref": "impulse scale",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "habit.h_weeks",
+      "default": 22,
+      "min": 8,
+      "max": 52,
+      "source": "assumption",
+      "source_ref": "memory half-life",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "habit.n_branching",
+      "default": 0.3,
+      "min": 0,
+      "max": 0.95,
+      "source": "assumption",
+      "source_ref": "branching ratio",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "habit.c_conversion",
+      "default": 0.66,
+      "min": 0.1,
+      "max": 0.8,
+      "source": "assumption",
+      "source_ref": "durable conversion c",
+      "unit": "",
+      "note": ""
+    },
+    {
+      "name": "habit.retention_half_life_weeks",
+      "default": 96,
+      "min": 26,
+      "max": 156,
+      "source": "assumption",
+      "source_ref": "U retention half-life",
+      "unit": "",
+      "note": ""
+    }
+  ],
+  "verdict_thresholds": {
+    "payback_acceleration_weeks": 8,
+    "does_not_payback_max_p": 0.1,
+    "fragile_min_payback_104_p": 0.5,
+    "fragile_closure_payback_p": 0.5,
+    "attention_dependent_payback_p": 0.5,
+    "structural_margin_min_pp": 5,
+    "break_even_margin_abs_pp": 3,
+    "assisted_margin_lo_pp": 3,
+    "assisted_margin_hi_pp": 5
+  }
+}

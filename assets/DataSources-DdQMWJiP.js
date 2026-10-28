@@ -1,0 +1,1 @@
+import{q as a,j as r,d2 as s}from"./main-BWiVaK3s.js";import"./leaflet-C8RAIt1e.js";function o(){const[t]=a(),e=t.toString();return r.jsx(s,{to:e?`/intelligence/data?${e}`:"/intelligence/data",replace:!0})}export{o as IntelligenceDataSourcesPage};

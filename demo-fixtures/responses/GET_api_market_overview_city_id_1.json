@@ -1,0 +1,156 @@
+{
+  "city_id": 1,
+  "data_version": "6840f16b4c384ecf9b7208841554f46c",
+  "meta": {
+    "city_name": "Paris",
+    "h3_resolution": 9,
+    "viable_cells": 940,
+    "median_opportunity": 56.3,
+    "leading_pillar": "competitive",
+    "portfolio_locations": 22,
+    "portfolio_locations_all": 22,
+    "matrix_quotient_denominator": "all",
+    "market_watch_matrix_ready": true,
+    "market_watch_venues": 20797,
+    "market_watch_cuisine_groups": 21,
+    "pillar_averages": {
+      "demographics": 50,
+      "competitive": 68.6,
+      "foot_traffic": 50,
+      "digital": 50,
+      "financial": 50
+    },
+    "top_demand_raw_index": 106761.00310000002
+  },
+  "hero": {
+    "headline_template": "{city_name} is mapped on an H3 grid at resolution {h3_res}. {viable_count} viable cells carry balanced opportunity scores; demographics use density × income index, not population alone.",
+    "slots": {
+      "city_name": "Paris",
+      "h3_res": "9",
+      "viable_count": "940"
+    },
+    "footnote": null,
+    "viable_cells": 940,
+    "median_opportunity": 56.3
+  },
+  "cards": [
+    {
+      "id": "explore",
+      "question": "Where is demand strongest on the grid?",
+      "headline_template": "Top demographics percentile sits in {area} ({score} on the city scale).",
+      "slots": {
+        "area": "16th arrondissement",
+        "score": "100"
+      },
+      "footnote": "Demographics pillar uses density × income index at cell level.",
+      "caveat": null,
+      "display_number": 100,
+      "number_unit": "demographics percentile (top cell)",
+      "number_tooltip": "Normalized city percentile for the demographics composite on the highest cell.",
+      "tier": "Real",
+      "as_of": null,
+      "as_of_tooltip": "INSEE IRIS 2021 population density and Filosofi 2021 income index.",
+      "link": {
+        "path": "/intelligence/explore",
+        "label": "Open Explore"
+      },
+      "source": {
+        "endpoint": "area_cells",
+        "field": "demographics_normalized"
+      }
+    },
+    {
+      "id": "opportunity",
+      "question": "How strong is balanced opportunity city-wide?",
+      "headline_template": "Median balanced score is {median}; strongest pillar on average is {pillar}. Peak cell: {peak_area} ({peak_score}).",
+      "slots": {
+        "median": "56",
+        "pillar": "Competitive",
+        "peak_area": "12th arrondissement",
+        "peak_score": "100"
+      },
+      "footnote": "Balanced weights: demographics 35%, competitive 25%, digital 15%, foot traffic 15%, financial 10%.",
+      "caveat": "Scores compare cells within this city only, not a site recommendation.",
+      "display_number": 56,
+      "number_unit": "median balanced opportunity score",
+      "number_tooltip": "50th percentile of opportunity_score across viable cells.",
+      "tier": "Proxy",
+      "as_of": null,
+      "as_of_tooltip": "Mixed INSEE, OSM, and model pillars, see Data sources for field lineage.",
+      "link": {
+        "path": "/intelligence/opportunity",
+        "label": "Open Opportunity"
+      },
+      "source": {
+        "endpoint": "area_cells",
+        "field": "opportunity_score"
+      }
+    },
+    {
+      "id": "market_watch",
+      "question": "How rich is the food-supply landscape?",
+      "headline_template": "{venues} active food venues roll up to {groups} cuisine groups across {viable} viable cells.",
+      "slots": {
+        "venues": "20,797",
+        "groups": "21",
+        "viable": "940"
+      },
+      "footnote": "Market Watch matrix is offline-built from OpenStreetMap venues.",
+      "caveat": "LQ and gap views exclude low tag-coverage cells, read the panel note when present.",
+      "display_number": 20797,
+      "number_unit": "active food venues (city)",
+      "number_tooltip": "Counted in the Market Watch matrix build for this city.",
+      "tier": "Real",
+      "as_of": null,
+      "as_of_tooltip": "OSM Overpass refresh; matrix warmed at server start.",
+      "link": {
+        "path": "/intelligence/market-watch",
+        "label": "Open Market Watch"
+      },
+      "source": {
+        "endpoint": "/api/market-watch/matrix",
+        "field": "totals.venues"
+      }
+    },
+    {
+      "id": "data",
+      "question": "How does your portfolio sit on the grid?",
+      "headline_template": "{locations} portfolio pins in {city_name}; {locations_all} across all seeded cities. Inspect lineage in Data.",
+      "slots": {
+        "locations": "22",
+        "locations_all": "22",
+        "city_name": "Paris"
+      },
+      "footnote": null,
+      "caveat": "Pin-level demographics can differ from hex aggregates on the same street.",
+      "display_number": 22,
+      "number_unit": "portfolio pins in Paris",
+      "number_tooltip": "Locations linked to your company brands in this city.",
+      "tier": "Real",
+      "as_of": null,
+      "as_of_tooltip": "Portfolio records in Vantage, not external POS feeds.",
+      "link": {
+        "path": "/intelligence/data",
+        "label": "Open Data"
+      },
+      "source": {
+        "endpoint": "/api/locations",
+        "field": "count"
+      }
+    }
+  ],
+  "sources_card": {
+    "display_number": 974,
+    "tier": "Real",
+    "as_of": null,
+    "link": {
+      "path": "/intelligence/sources",
+      "label": "Open data sources"
+    },
+    "source": {
+      "endpoint": "area_cells",
+      "field": "viable cell count"
+    }
+  },
+  "server_ms": 641.72
+}

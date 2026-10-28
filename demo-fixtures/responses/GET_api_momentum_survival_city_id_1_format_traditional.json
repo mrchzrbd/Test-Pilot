@@ -1,0 +1,1060 @@
+{
+  "city_id": 1,
+  "format_group": "traditional",
+  "area": null,
+  "curves": [
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2007,
+      "years_since_opening": 0,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2007,
+      "years_since_opening": 1,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2007,
+      "years_since_opening": 2,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2007,
+      "years_since_opening": 3,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2007,
+      "years_since_opening": 4,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2007,
+      "years_since_opening": 5,
+      "share_alive": 0.6390667886550778
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2008,
+      "years_since_opening": 0,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2008,
+      "years_since_opening": 1,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2008,
+      "years_since_opening": 2,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2008,
+      "years_since_opening": 3,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2008,
+      "years_since_opening": 4,
+      "share_alive": 0.6971553610503283
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2008,
+      "years_since_opening": 5,
+      "share_alive": 0.6612691466083152
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2009,
+      "years_since_opening": 0,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2009,
+      "years_since_opening": 1,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2009,
+      "years_since_opening": 2,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2009,
+      "years_since_opening": 3,
+      "share_alive": 0.7368655387355298
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2009,
+      "years_since_opening": 4,
+      "share_alive": 0.6869991095280499
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2009,
+      "years_since_opening": 5,
+      "share_alive": 0.6495992876224399
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2010,
+      "years_since_opening": 0,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2010,
+      "years_since_opening": 1,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2010,
+      "years_since_opening": 2,
+      "share_alive": 0.8167449807774455
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2010,
+      "years_since_opening": 3,
+      "share_alive": 0.7543784707390004
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2010,
+      "years_since_opening": 4,
+      "share_alive": 0.7052541648868005
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2010,
+      "years_since_opening": 5,
+      "share_alive": 0.6518581802648441
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2011,
+      "years_since_opening": 0,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2011,
+      "years_since_opening": 1,
+      "share_alive": 0.8872305140961857
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2011,
+      "years_since_opening": 2,
+      "share_alive": 0.8271144278606966
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2011,
+      "years_since_opening": 3,
+      "share_alive": 0.7657545605306799
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2011,
+      "years_since_opening": 4,
+      "share_alive": 0.6994195688225538
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2011,
+      "years_since_opening": 5,
+      "share_alive": 0.6442786069651741
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2012,
+      "years_since_opening": 0,
+      "share_alive": 0.9611135660627486
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2012,
+      "years_since_opening": 1,
+      "share_alive": 0.8935041979673001
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2012,
+      "years_since_opening": 2,
+      "share_alive": 0.8236853733981441
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2012,
+      "years_since_opening": 3,
+      "share_alive": 0.7419354838709677
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2012,
+      "years_since_opening": 4,
+      "share_alive": 0.6659301811754308
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2012,
+      "years_since_opening": 5,
+      "share_alive": 0.6089262041537782
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2013,
+      "years_since_opening": 0,
+      "share_alive": 0.9564681724845996
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2013,
+      "years_since_opening": 1,
+      "share_alive": 0.8821355236139631
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2013,
+      "years_since_opening": 2,
+      "share_alive": 0.8094455852156057
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2013,
+      "years_since_opening": 3,
+      "share_alive": 0.7383983572895277
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2013,
+      "years_since_opening": 4,
+      "share_alive": 0.6739219712525667
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2013,
+      "years_since_opening": 5,
+      "share_alive": 0.6143737166324436
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2014,
+      "years_since_opening": 0,
+      "share_alive": 0.9475332811276429
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2014,
+      "years_since_opening": 1,
+      "share_alive": 0.87548942834769
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2014,
+      "years_since_opening": 2,
+      "share_alive": 0.7960062646828504
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2014,
+      "years_since_opening": 3,
+      "share_alive": 0.7086922474549726
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2014,
+      "years_since_opening": 4,
+      "share_alive": 0.6382145653876272
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2014,
+      "years_since_opening": 5,
+      "share_alive": 0.5747846515270164
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2015,
+      "years_since_opening": 0,
+      "share_alive": 0.948971820258949
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2015,
+      "years_since_opening": 1,
+      "share_alive": 0.8762376237623762
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2015,
+      "years_since_opening": 2,
+      "share_alive": 0.7932216298552932
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2015,
+      "years_since_opening": 3,
+      "share_alive": 0.7151561309977151
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2015,
+      "years_since_opening": 4,
+      "share_alive": 0.65003808073115
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2015,
+      "years_since_opening": 5,
+      "share_alive": 0.5955826351865956
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2016,
+      "years_since_opening": 0,
+      "share_alive": 0.9390080428954424
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2016,
+      "years_since_opening": 1,
+      "share_alive": 0.8555630026809652
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2016,
+      "years_since_opening": 2,
+      "share_alive": 0.7667560321715817
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2016,
+      "years_since_opening": 3,
+      "share_alive": 0.6829758713136729
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2016,
+      "years_since_opening": 4,
+      "share_alive": 0.6193029490616622
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2016,
+      "years_since_opening": 5,
+      "share_alive": 0.5697050938337802
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2017,
+      "years_since_opening": 0,
+      "share_alive": 0.9512605042016806
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2017,
+      "years_since_opening": 1,
+      "share_alive": 0.8769747899159663
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2017,
+      "years_since_opening": 2,
+      "share_alive": 0.7993277310924369
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2017,
+      "years_since_opening": 3,
+      "share_alive": 0.7075630252100841
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2017,
+      "years_since_opening": 4,
+      "share_alive": 0.6420168067226891
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2017,
+      "years_since_opening": 5,
+      "share_alive": 0.5932773109243697
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2018,
+      "years_since_opening": 0,
+      "share_alive": 0.9460146078120039
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2018,
+      "years_since_opening": 1,
+      "share_alive": 0.8704350587488091
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2018,
+      "years_since_opening": 2,
+      "share_alive": 0.7726262305493807
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2018,
+      "years_since_opening": 3,
+      "share_alive": 0.6881549698316926
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2018,
+      "years_since_opening": 4,
+      "share_alive": 0.6408383613845665
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2018,
+      "years_since_opening": 5,
+      "share_alive": 0.5808193077167355
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2019,
+      "years_since_opening": 0,
+      "share_alive": 0.9457921533393232
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2019,
+      "years_since_opening": 1,
+      "share_alive": 0.8897873614854747
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2019,
+      "years_since_opening": 2,
+      "share_alive": 0.7861635220125787
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2019,
+      "years_since_opening": 3,
+      "share_alive": 0.7178796046720575
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2019,
+      "years_since_opening": 4,
+      "share_alive": 0.6445043426175502
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2019,
+      "years_since_opening": 5,
+      "share_alive": 0.5705300988319856
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2020,
+      "years_since_opening": 0,
+      "share_alive": 0.937609841827768
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2020,
+      "years_since_opening": 1,
+      "share_alive": 0.8708260105448155
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2020,
+      "years_since_opening": 2,
+      "share_alive": 0.8084358523725835
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2020,
+      "years_since_opening": 3,
+      "share_alive": 0.6898066783831283
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2020,
+      "years_since_opening": 4,
+      "share_alive": 0.5971001757469244
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2020,
+      "years_since_opening": 5,
+      "share_alive": 0.5364674868189807
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2021,
+      "years_since_opening": 0,
+      "share_alive": 0.9544159544159544
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2021,
+      "years_since_opening": 1,
+      "share_alive": 0.8722018722018722
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2021,
+      "years_since_opening": 2,
+      "share_alive": 0.7684167684167684
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2021,
+      "years_since_opening": 3,
+      "share_alive": 0.684981684981685
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2021,
+      "years_since_opening": 4,
+      "share_alive": 0.6198616198616199
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2021,
+      "years_since_opening": 5,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2022,
+      "years_since_opening": 0,
+      "share_alive": 0.9553091397849462
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2022,
+      "years_since_opening": 1,
+      "share_alive": 0.8830645161290323
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2022,
+      "years_since_opening": 2,
+      "share_alive": 0.7758736559139785
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2022,
+      "years_since_opening": 3,
+      "share_alive": 0.7066532258064516
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2022,
+      "years_since_opening": 4,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2022,
+      "years_since_opening": 5,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2023,
+      "years_since_opening": 0,
+      "share_alive": 0.9448818897637795
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2023,
+      "years_since_opening": 1,
+      "share_alive": 0.8717191601049868
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2023,
+      "years_since_opening": 2,
+      "share_alive": 0.7683727034120735
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2023,
+      "years_since_opening": 3,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2023,
+      "years_since_opening": 4,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2023,
+      "years_since_opening": 5,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2024,
+      "years_since_opening": 0,
+      "share_alive": 0.9498640893989732
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2024,
+      "years_since_opening": 1,
+      "share_alive": 0.8849290244639082
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2024,
+      "years_since_opening": 2,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2024,
+      "years_since_opening": 3,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2024,
+      "years_since_opening": 4,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2024,
+      "years_since_opening": 5,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2025,
+      "years_since_opening": 0,
+      "share_alive": 0.95
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2025,
+      "years_since_opening": 1,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2025,
+      "years_since_opening": 2,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2025,
+      "years_since_opening": 3,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2025,
+      "years_since_opening": 4,
+      "share_alive": null
+    },
+    {
+      "scope_type": "city",
+      "scope_value": "Paris",
+      "format_group": "all",
+      "cohort_year": 2025,
+      "years_since_opening": 5,
+      "share_alive": null
+    }
+  ],
+  "cohort_heatmap": {
+    "cohort_years": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "by_format": {}
+  },
+  "age_at_closure": [
+    {
+      "share": 0.1153,
+      "closures": 1945,
+      "age_bucket": "0-1y",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.1013,
+      "closures": 1708,
+      "age_bucket": "1-2y",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.1197,
+      "closures": 2018,
+      "age_bucket": "2-3y",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.1929,
+      "closures": 3253,
+      "age_bucket": "3-5y",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.4708,
+      "closures": 7939,
+      "age_bucket": "5y+",
+      "format_group": "traditional_restaurant"
+    },
+    {
+      "share": 0.156,
+      "closures": 1955,
+      "age_bucket": "0-1y",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.1306,
+      "closures": 1637,
+      "age_bucket": "1-2y",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.145,
+      "closures": 1817,
+      "age_bucket": "2-3y",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.2064,
+      "closures": 2587,
+      "age_bucket": "3-5y",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.3621,
+      "closures": 4539,
+      "age_bucket": "5y+",
+      "format_group": "fast_food"
+    },
+    {
+      "share": 0.1923,
+      "closures": 20,
+      "age_bucket": "0-1y",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.0673,
+      "closures": 7,
+      "age_bucket": "1-2y",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.1923,
+      "closures": 20,
+      "age_bucket": "2-3y",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.1538,
+      "closures": 16,
+      "age_bucket": "3-5y",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.3942,
+      "closures": 41,
+      "age_bucket": "5y+",
+      "format_group": "cafeteria"
+    },
+    {
+      "share": 0.1343,
+      "closures": 332,
+      "age_bucket": "0-1y",
+      "format_group": "bars_cafes"
+    },
+    {
+      "share": 0.1112,
+      "closures": 275,
+      "age_bucket": "1-2y",
+      "format_group": "bars_cafes"
+    },
+    {
+      "share": 0.121,
+      "closures": 299,
+      "age_bucket": "2-3y",
+      "format_group": "bars_cafes"
+    },
+    {
+      "share": 0.1909,
+      "closures": 472,
+      "age_bucket": "3-5y",
+      "format_group": "bars_cafes"
+    },
+    {
+      "share": 0.4426,
+      "closures": 1094,
+      "age_bucket": "5y+",
+      "format_group": "bars_cafes"
+    }
+  ],
+  "closure_hazard": {
+    "formula": "h_w = 1 - survival_3y^(1/156)",
+    "horizon_weeks": 156,
+    "registry_source_key": "momentum_survival share_alive years_since=3 cohort 2022"
+  },
+  "weekly_closure_hazard": 0.0022232634718729605
+}

@@ -1,0 +1,1360 @@
+{
+  "meta": {
+    "is_simulated": true,
+    "label": "Illustrative data",
+    "months": 12,
+    "period_end": "2026-09-01",
+    "months_history_floor": 24,
+    "comparability_status": "ramp_up",
+    "comparability_tooltip": "Ramp-up, excluded",
+    "comparability_common_months": 0,
+    "network_trends": {
+      "revenue": null,
+      "covers": null,
+      "avg_check": null,
+      "revenue_per_seat": null,
+      "ebitda_margin": null
+    },
+    "network_trend_pct": null,
+    "network_trends_note": "Trend arrows compare the same calendar months year over year, using post-ramp months only. Tooltip shows which months were paired.",
+    "network_trends_site_count": 0,
+    "network_like_for_like_count": 0
+  },
+  "sites": [
+    {
+      "site_id": 1,
+      "name": "Paris 2",
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2024-09-01",
+      "months_of_history": 25,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 2,
+      "name": "Paris 4",
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2025-01-01",
+      "months_of_history": 21,
+      "months_open_in_period": 0,
+      "has_full_history": false,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 3,
+      "name": "Paris 17",
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2025-06-01",
+      "months_of_history": 16,
+      "months_open_in_period": 0,
+      "has_full_history": false,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 4,
+      "name": "Paris – Bretagne",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 5,
+      "name": "Paris – Cherche-Midi",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 6,
+      "name": "Paris – Courcelles",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 7,
+      "name": "Paris – Denfert-Rochereau",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 8,
+      "name": "Paris – Grenelle",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 9,
+      "name": "Paris – La Boétie",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 10,
+      "name": "Paris – Lepic",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 11,
+      "name": "Paris – Martyrs",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 12,
+      "name": "Paris – Mozart",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 13,
+      "name": "Paris – Poincaré",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 14,
+      "name": "Paris – Réaumur",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 15,
+      "name": "Paris – Saint-Antoine",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 16,
+      "name": "Paris – Saint-Dominique",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 17,
+      "name": "Paris – Secrétan",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 18,
+      "name": "Paris – Vaugirard",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 19,
+      "name": "Paris – Villiers",
+      "brand_name": "Sushi Shop",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2010-01-01",
+      "months_of_history": 201,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 20,
+      "name": "Paris – Saint-Lazare",
+      "brand_name": "Tortilla",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2024-06-19",
+      "months_of_history": 28,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 21,
+      "name": "Paris – Bercy",
+      "brand_name": "Tortilla",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2024-06-19",
+      "months_of_history": 28,
+      "months_open_in_period": 0,
+      "has_full_history": true,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    },
+    {
+      "site_id": 22,
+      "name": "Paris – Gare du Nord",
+      "brand_name": "Tortilla",
+      "area_label": "Paris",
+      "seats": 60,
+      "opened_on": "2025-07-24",
+      "months_of_history": 15,
+      "months_open_in_period": 0,
+      "has_full_history": false,
+      "trend_mode": "ramp_up",
+      "trend_label": "Ramp-up",
+      "trend_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year).",
+      "like_for_like_count": 0,
+      "trend_pct": null,
+      "current": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "previous": {
+        "revenue": 0,
+        "covers": 0,
+        "avg_check": 0,
+        "ebitda": 0,
+        "rent": 0,
+        "revenue_per_seat": 0,
+        "ebitda_margin": null,
+        "rent_to_revenue": null
+      },
+      "trends": {
+        "revenue": null,
+        "covers": null,
+        "avg_check": null,
+        "revenue_per_seat": null,
+        "ebitda_margin": null
+      },
+      "comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "solo_comparability": {
+        "status": "ramp_up",
+        "tooltip": "Ramp-up, excluded",
+        "post_ramp_month_count": 0,
+        "months_label": null,
+        "ebitda_margin": null,
+        "revenue_per_seat_month": null
+      },
+      "kpi_tooltip": "No like-for-like months yet (post-ramp, same calendar month year over year)."
+    }
+  ],
+  "network": {
+    "revenue": 0,
+    "covers": 0,
+    "ebitda": 0,
+    "revenue_per_seat": null,
+    "seat_months": 0
+  },
+  "verdict": {
+    "tone": "neutral",
+    "status": "Ramp-up",
+    "chips": [
+      "Ramp-up"
+    ],
+    "sentence": "All sites are still in ramp-up; like-for-like trends are not available yet."
+  }
+}

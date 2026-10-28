@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "radius_m": 500,
+    "brand_id": 2,
+    "decay": 1.5,
+    "reach_m": 1200,
+    "label": "MODELLED overview, not measured sales",
+    "rank_formula": "rank_score = net_new_demand_share − mean cannibalized demand share of prior (Huff simulation)"
+  },
+  "sites": [
+    {
+      "id": 1,
+      "name": "Paris 2",
+      "brand_id": 2,
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "area_label": "2nd arrondissement",
+      "captured_demand_share": 0.049034,
+      "nearest_neighbor_m": 2340.4,
+      "nearest_neighbor_name": "Paris 4",
+      "status": "isolated",
+      "contested_share": 0.013254
+    },
+    {
+      "id": 2,
+      "name": "Paris 4",
+      "brand_id": 2,
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "area_label": "4th arrondissement",
+      "captured_demand_share": 0.058308,
+      "nearest_neighbor_m": 2340.4,
+      "nearest_neighbor_name": "Paris 2",
+      "status": "isolated",
+      "contested_share": 0.010513
+    },
+    {
+      "id": 3,
+      "name": "Paris 17",
+      "brand_id": 2,
+      "brand_name": "L'Atelier Entrecôte & Volaille",
+      "area_label": "17th arrondissement",
+      "captured_demand_share": 0.045005,
+      "nearest_neighbor_m": 4488.9,
+      "nearest_neighbor_name": "Paris 2",
+      "status": "isolated",
+      "contested_share": 0
+    }
+  ],
+  "kpis": {
+    "site_count": 3,
+    "demand_within_reach_share": 0.152347,
+    "closest_pair": {
+      "a": "Paris 2",
+      "b": "Paris 4",
+      "distance_m": 2340.4
+    },
+    "contested_demand_share": 0.001263,
+    "break_even_pairs": [],
+    "smallest_break_even_radius_m": null
+  },
+  "demand_split": {
+    "sites": [
+      {
+        "site_id": 1,
+        "share": 0.048384
+      },
+      {
+        "site_id": 2,
+        "share": 0.057695
+      },
+      {
+        "site_id": 3,
+        "share": 0.045005
+      }
+    ],
+    "contested_share": 0.001263,
+    "outside_reach_share": 0.847653
+  },
+  "best_next_moves": [
+    {
+      "area_label": "17th arrondissement",
+      "lat": 48.88783238582123,
+      "lng": 2.3210405209889085,
+      "h3_index": "891fb47597bffff",
+      "opportunity_score": 94.9,
+      "net_new_demand_share": 0.075838,
+      "candidate_demand_share": 0.075838,
+      "demand_outside_reach_share": 0.075838,
+      "demand_shifted_share": 0,
+      "cannibalization_share_default": 0,
+      "cannibalization_share_low": 0,
+      "cannibalization_share_high": 0,
+      "cannibalization_by_site": [
+        {
+          "location_id": 1,
+          "name": "Paris 2",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        },
+        {
+          "location_id": 2,
+          "name": "Paris 4",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        },
+        {
+          "location_id": 3,
+          "name": "Paris 17",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        }
+      ],
+      "rank_score": 0.075838
+    },
+    {
+      "area_label": "18th arrondissement",
+      "lat": 48.89127004806701,
+      "lng": 2.339997886639034,
+      "h3_index": "891fb46645bffff",
+      "opportunity_score": 92,
+      "net_new_demand_share": 0.070523,
+      "candidate_demand_share": 0.070523,
+      "demand_outside_reach_share": 0.070523,
+      "demand_shifted_share": 0,
+      "cannibalization_share_default": 0,
+      "cannibalization_share_low": 0,
+      "cannibalization_share_high": 0,
+      "cannibalization_by_site": [
+        {
+          "location_id": 1,
+          "name": "Paris 2",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        },
+        {
+          "location_id": 2,
+          "name": "Paris 4",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        },
+        {
+          "location_id": 3,
+          "name": "Paris 17",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        }
+      ],
+      "rank_score": 0.070523
+    },
+    {
+      "area_label": "16th arrondissement",
+      "lat": 48.85682096854989,
+      "lng": 2.2811684646984083,
+      "h3_index": "891fb462937ffff",
+      "opportunity_score": 90.4,
+      "net_new_demand_share": 0.064284,
+      "candidate_demand_share": 0.064284,
+      "demand_outside_reach_share": 0.064284,
+      "demand_shifted_share": 0,
+      "cannibalization_share_default": 0,
+      "cannibalization_share_low": 0,
+      "cannibalization_share_high": 0,
+      "cannibalization_by_site": [
+        {
+          "location_id": 1,
+          "name": "Paris 2",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        },
+        {
+          "location_id": 2,
+          "name": "Paris 4",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        },
+        {
+          "location_id": 3,
+          "name": "Paris 17",
+          "demand_lost_absolute": 0,
+          "demand_lost_share_of_prior": 0
+        }
+      ],
+      "rank_score": 0.064284
+    }
+  ],
+  "verdict": {
+    "status": "well_spaced",
+    "contested_demand_share": 0.001263,
+    "overlapping_pair_count": 0,
+    "high_risk_pair_count": 0
+  },
+  "pairs": []
+}
